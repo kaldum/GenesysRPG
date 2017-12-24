@@ -1,6 +1,7 @@
 /*
 Version Info:
-Version 6.3.2
+Version 0.0.1
+Created by GM Knowledge Rhino
 */
 .sheet-clear {
     clear: both
@@ -1327,32 +1328,32 @@ button.sheet-btn-roll-crit[type=roll]:active {
 /* TIP HELP */
 
 .sheet-icon-S {
-    background: url('http://galacticcampaigns.com/images/EotE/Symbols/S.png') center center no-repeat;
+    background: url('https://i.imgur.com/eUWFvS1.png') center center no-repeat;
 }
 
 /* Success - Symbol */
 .sheet-icon-F {
-    background: url('http://galacticcampaigns.com/images/EotE/Symbols/F.png') center center no-repeat;
+    background: url('https://i.imgur.com/r7Vyuvx.png') center center no-repeat;
 }
 
 /* Failure - Symbol */
 .sheet-icon-A {
-    background: url('http://galacticcampaigns.com/images/EotE/Symbols/A.png') center center no-repeat;
+    background: url('https://i.imgur.com/O1dDNFm.png') center center no-repeat;
 }
 
 /* Advantage - Symbol */
 .sheet-icon-Tri {
-    background: url('http://galacticcampaigns.com/images/EotE/Symbols/Triumph.png') center center no-repeat;
+    background: url('https://i.imgur.com/HhC1DtU.png') center center no-repeat;
 }
 
 /* Triumph - Symbol */
 .sheet-icon-T {
-    background: url('http://galacticcampaigns.com/images/EotE/Symbols/T.png') center center no-repeat;
+    background: url('https://i.imgur.com/KaNTWxn.png') center center no-repeat;
 }
 
 /* Threat - Symbol */
 .sheet-icon-Des {
-    background: url('http://galacticcampaigns.com/images/EotE/Symbols/Despair.png') center center no-repeat;
+    background: url('https://i.imgur.com/50OmhOU.png') center center no-repeat;
 }
 
 /* Despair - Symbol */
@@ -1380,12 +1381,6 @@ button.sheet-btn-roll-crit[type=roll]:active {
     background: url('http://galacticcampaigns.com/images/EotE/Setback/SetBackBlank.png') center center no-repeat;
 }
 
-.sheet-icon-W {
-    background: url('http://galacticcampaigns.com/images/EotE/Force/ForceD.png') center center no-repeat;
-}
-
-/* Force Die - Black - Symbol */
-
 .sheet-icon-S,
 .sheet-icon-F,
 .sheet-icon-A,
@@ -1397,8 +1392,7 @@ button.sheet-btn-roll-crit[type=roll]:active {
 .sheet-icon-Y,
 .sheet-icon-P,
 .sheet-icon-R,
-.sheet-icon-BLK,
-.sheet-icon-W {
+.sheet-icon-BLK {
     background-size: 15px 15px;
     display: inline-block;
     width: 15px;
