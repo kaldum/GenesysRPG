@@ -1,5 +1,5 @@
 /*
- Current Version: 0.0.3
+ Current Version: 0.0.4
  Last updated: 12.26.2017
  Character Sheet and Script created by: GM Knowledge Rhino
 
@@ -88,8 +88,8 @@
  */
 
 /* Define functions that may not always exist */
-if(!log) {
-    log = function(input) {
+if (!log) {
+    log = function (input) {
         console.log(input);
     }
 }
@@ -146,7 +146,7 @@ if (!Date.now) {
 }
 /* End Sheet Character Sheet Auto Creator */
 
-function SuggestionEngine () {
+function SuggestionEngine() {
     var that = this;
 
     var flags = {
@@ -157,7 +157,7 @@ function SuggestionEngine () {
         isFearCheck: false
     };
 
-    function convertToBoolean (value) {
+    function convertToBoolean(value) {
         // will trap the following properly: false, true, "false", "true", 0, 1, "", and undefined
         //noinspection RedundantConditionalExpressionJS
         return !value || value == 1 || value === 'true'
@@ -177,7 +177,7 @@ function SuggestionEngine () {
                     }
                 ],
                 advantage: [
-                    {text: "Gain $BOOST$ on the character's first check.", required: 1},
+                    { text: "Gain $BOOST$ on the character's first check.", required: 1 },
                     {
                         text: "If spending multiple $ADVANTAGE$, grant $BOOST$ to an additional player's first check.",
                         required: 2
@@ -224,25 +224,25 @@ function SuggestionEngine () {
                         text: "Better target for the destination, e.g.: place vessel directly into orbit around target planet.",
                         required: 1
                     },
-                    {text: "Reduce time spent calculating.", required: 1}
+                    { text: "Reduce time spent calculating.", required: 1 }
                 ],
                 advantage: [
-                    {text: "Reduce travel time.", required: 1},
-                    {text: "Identify convenient stopovers to resupply or conduct additional business.", required: 1}
+                    { text: "Reduce travel time.", required: 1 },
+                    { text: "Identify convenient stopovers to resupply or conduct additional business.", required: 1 }
                 ],
                 triumph: [
-                    {text: "Complete calculations in minimum time.", required: 1},
-                    {text: "Greatly reduce travel time.", required: 1},
-                    {text: "Reveal highly valuable but previously unknown information.", required: 1}
+                    { text: "Complete calculations in minimum time.", required: 1 },
+                    { text: "Greatly reduce travel time.", required: 1 },
+                    { text: "Reveal highly valuable but previously unknown information.", required: 1 }
                 ],
                 threat: [
-                    {text: "Decrease accuracy of hyperspace jump.", required: 1},
-                    {text: "Increase travel time.", required: 1},
-                    {text: "Miss relevant details when analyzing hyperspace routes or galactic maps.", required: 1}
+                    { text: "Decrease accuracy of hyperspace jump.", required: 1 },
+                    { text: "Increase travel time.", required: 1 },
+                    { text: "Miss relevant details when analyzing hyperspace routes or galactic maps.", required: 1 }
                 ],
                 despair: [
-                    {text: "Greatly decrease accuracy of hyperspace jump.", required: 1},
-                    {text: "Greatly increase travel time.", required: 1},
+                    { text: "Greatly decrease accuracy of hyperspace jump.", required: 1 },
+                    { text: "Greatly increase travel time.", required: 1 },
                     {
                         text: "Miss large amounts of relevant details when analyzing hyperspace routes or galactic maps.",
                         required: 1
@@ -255,8 +255,8 @@ function SuggestionEngine () {
             },
             Athletics: {
                 success: [
-                    {text: "Reduce time required.", required: 1},
-                    {text: "Increase distance travelled.", required: 1}
+                    { text: "Reduce time required.", required: 1 },
+                    { text: "Increase distance travelled.", required: 1 }
                 ],
                 advantage: [
                     {
@@ -269,10 +269,10 @@ function SuggestionEngine () {
                     }
                 ],
                 triumph: [
-                    {text: "Perform the check with truly impressive results.", required: 1}
+                    { text: "Perform the check with truly impressive results.", required: 1 }
                 ],
                 threat: [
-                    {text: "Small amounts cause strain.", required: 1},
+                    { text: "Small amounts cause strain.", required: 1 },
                     {
                         text: "Larger amounts may cause character to fall prone, or even suffer a wound from sprains and bruises.",
                         required: 1
@@ -293,42 +293,42 @@ function SuggestionEngine () {
                     }
                 ],
                 advantage: [
-                    {text: "Affect unexpected subjects beyond the original target.", required: 1}
+                    { text: "Affect unexpected subjects beyond the original target.", required: 1 }
                 ],
                 triumph: [
-                    {text: "Have target NPC become recurring character who remains predisposed to assist.", required: 1}
+                    { text: "Have target NPC become recurring character who remains predisposed to assist.", required: 1 }
                 ],
                 threat: [
-                    {text: "Reduce the number of people able to influence", required: 1},
-                    {text: "Turn those affected negatively against character.", required: 1}
+                    { text: "Reduce the number of people able to influence", required: 1 },
+                    { text: "Turn those affected negatively against character.", required: 1 }
                 ],
                 despair: [
-                    {text: "Turn NPC against character and make into a minor recurring adversary.", required: 1}
+                    { text: "Turn NPC against character and make into a minor recurring adversary.", required: 1 }
                 ]
             },
             Coercion: {
                 success: [
-                    {text: "Spend 2 extra successes to inflict one strain on target. ", required: 2}
+                    { text: "Spend 2 extra successes to inflict one strain on target. ", required: 2 }
                 ],
                 advantage: [
-                    {text: "Affect unexpected subjects beyond the original target.", required: 1}
+                    { text: "Affect unexpected subjects beyond the original target.", required: 1 }
                 ],
                 triumph: [
-                    {text: "Shift allegiance of target.", required: 1}
+                    { text: "Shift allegiance of target.", required: 1 }
                 ],
                 threat: [
-                    {text: "Target has building resentment towards character.", required: 1}
+                    { text: "Target has building resentment towards character.", required: 1 }
                 ],
                 despair: [
-                    {text: "Reveal something about goals and motivations to target.", required: 1}
+                    { text: "Reveal something about goals and motivations to target.", required: 1 }
                 ]
             },
             Computers: {
                 success: [
-                    {text: "Reduce time required.", required: 1}
+                    { text: "Reduce time required.", required: 1 }
                 ],
                 advantage: [
-                    {text: "Uncover additional information about the system.", required: 1}
+                    { text: "Uncover additional information about the system.", required: 1 }
                 ],
                 triumph: [
                     {
@@ -351,43 +351,43 @@ function SuggestionEngine () {
             },
             Cool: {
                 advantage: [
-                    {text: "Gain an additional insight into the situation at hand.", required: 1}
+                    { text: "Gain an additional insight into the situation at hand.", required: 1 }
                 ],
                 triumph: [
-                    {text: "Heal 3 strain.", required: 1}
+                    { text: "Heal 3 strain.", required: 1 }
                 ],
                 threat: [
-                    {text: "Miss a vital detail or event.", required: 1}
+                    { text: "Miss a vital detail or event.", required: 1 }
                 ],
                 despair: [
-                    {text: "The character is overwhelmed by the chaos and is stunned for one round.", required: 1}
+                    { text: "The character is overwhelmed by the chaos and is stunned for one round.", required: 1 }
                 ]
             },
             Coordination: {
                 success: [
-                    {text: "Reduce time required.", required: 1},
-                    {text: "Increase distance travelled by 25%, (maximum 100% increase).", required: 1}
+                    { text: "Reduce time required.", required: 1 },
+                    { text: "Increase distance travelled by 25%, (maximum 100% increase).", required: 1 }
                 ],
                 advantage: [
-                    {text: "Spend $ADVANTAGE$$ADVANTAGE$ to grant additional maneuver during turn.", required: 2}
+                    { text: "Spend $ADVANTAGE$$ADVANTAGE$ to grant additional maneuver during turn.", required: 2 }
                 ],
                 triumph: [
-                    {text: "Perform the check with truly impressive results.", required: 1}
+                    { text: "Perform the check with truly impressive results.", required: 1 }
                 ],
                 threat: [
-                    {text: "Lose free maneuver for one round.", required: 1}
+                    { text: "Lose free maneuver for one round.", required: 1 }
                 ],
                 despair: [
-                    {text: "Suffer a wound", required: 1},
-                    {text: "Lose a vital piece of equipment.", required: 1}
+                    { text: "Suffer a wound", required: 1 },
+                    { text: "Lose a vital piece of equipment.", required: 1 }
                 ]
             },
             Deception: {
                 success: [
-                    {text: "Extend duration of Deceit action.", required: 1}
+                    { text: "Extend duration of Deceit action.", required: 1 }
                 ],
                 advantage: [
-                    {text: "Increase the value of any goods or services gained through the action.", required: 1}
+                    { text: "Increase the value of any goods or services gained through the action.", required: 1 }
                 ],
                 triumph: [
                     {
@@ -396,7 +396,7 @@ function SuggestionEngine () {
                     }
                 ],
                 threat: [
-                    {text: "Give away a portion of the lie, making target suspicious.", required: 1}
+                    { text: "Give away a portion of the lie, making target suspicious.", required: 1 }
                 ],
                 despair: [
                     {
@@ -407,10 +407,10 @@ function SuggestionEngine () {
             },
             Discipline: {
                 success: [
-                    {text: "Downgrade difficulty of the dice pool for next action (max. 1).", required: 1}
+                    { text: "Downgrade difficulty of the dice pool for next action (max. 1).", required: 1 }
                 ],
                 advantage: [
-                    {text: "Gain an additional insight into the situation at hand.", required: 1}
+                    { text: "Gain an additional insight into the situation at hand.", required: 1 }
                 ],
                 triumph: [
                     {
@@ -433,11 +433,11 @@ function SuggestionEngine () {
             },
             Leadership: {
                 success: [
-                    {text: "Extend target's support for additional scenes.", required: 1},
-                    {text: "Increase efficiency or effectiveness of target during ordered actions.", required: 1}
+                    { text: "Extend target's support for additional scenes.", required: 1 },
+                    { text: "Increase efficiency or effectiveness of target during ordered actions.", required: 1 }
                 ],
                 advantage: [
-                    {text: "Affect bystanders in addition to target.", required: 1}
+                    { text: "Affect bystanders in addition to target.", required: 1 }
                 ],
                 triumph: [
                     {
@@ -464,7 +464,7 @@ function SuggestionEngine () {
             },
             Mechanics: {
                 success: [
-                    {text: "Reduce time required by 10-20%", required: 1}
+                    { text: "Reduce time required by 10-20%", required: 1 }
                 ],
                 advantage: [
                     {
@@ -473,7 +473,7 @@ function SuggestionEngine () {
                     }
                 ],
                 triumph: [
-                    {text: "Give device additional single use function.", required: 1}
+                    { text: "Give device additional single use function.", required: 1 }
                 ],
                 threat: [
                     {
@@ -482,17 +482,17 @@ function SuggestionEngine () {
                     }
                 ],
                 despair: [
-                    {text: "Cause further harm to target object or system.", required: 1},
-                    {text: "Cause other components of target to malfunction.", required: 1}
+                    { text: "Cause further harm to target object or system.", required: 1 },
+                    { text: "Cause other components of target to malfunction.", required: 1 }
                 ]
             },
             Medicine: {
                 success: [
-                    {text: "Target recovers one additional wound.", required: 1},
-                    {text: "Reduce healing time by one hour.", required: 1}
+                    { text: "Target recovers one additional wound.", required: 1 },
+                    { text: "Reduce healing time by one hour.", required: 1 }
                 ],
                 advantage: [
-                    {text: "Eliminate one strain from target.", required: 1}
+                    { text: "Eliminate one strain from target.", required: 1 }
                 ],
                 triumph: [
                     {
@@ -501,17 +501,17 @@ function SuggestionEngine () {
                     }
                 ],
                 threat: [
-                    {text: "Inflict strain on the target due to shock of procedure.", required: 1},
-                    {text: "Increase time procedure takes.", required: 1}
+                    { text: "Inflict strain on the target due to shock of procedure.", required: 1 },
+                    { text: "Increase time procedure takes.", required: 1 }
                 ],
                 despair: [
-                    {text: "A truly terrible accident, perhaps inflicting further wounds on target.", required: 1}
+                    { text: "A truly terrible accident, perhaps inflicting further wounds on target.", required: 1 }
                 ]
             },
             Negotiation: {
                 success: [
-                    {text: "Increase acting character's profit by 5%.", required: 1},
-                    {text: "Modify scope of agreement.", required: 1}
+                    { text: "Increase acting character's profit by 5%.", required: 1 },
+                    { text: "Modify scope of agreement.", required: 1 }
                 ],
                 advantage: [
                     {
@@ -520,13 +520,13 @@ function SuggestionEngine () {
                     }
                 ],
                 triumph: [
-                    {text: "Have target NPC become regular client or specialist vendor.", required: 1}
+                    { text: "Have target NPC become regular client or specialist vendor.", required: 1 }
                 ],
 
                 threat: [
-                    {text: "Increase cost of goods purchased.", required: 1},
-                    {text: "Decrease value of goods sold.", required: 1},
-                    {text: "Shorten contracts negotiated.", required: 1}
+                    { text: "Increase cost of goods purchased.", required: 1 },
+                    { text: "Decrease value of goods sold.", required: 1 },
+                    { text: "Shorten contracts negotiated.", required: 1 }
                 ],
                 despair: [
                     {
@@ -537,10 +537,10 @@ function SuggestionEngine () {
             },
             Perception: {
                 success: [
-                    {text: "Reveal additional details.", required: 1}
+                    { text: "Reveal additional details.", required: 1 }
                 ],
                 advantage: [
-                    {text: "Recall additional information associated with object noticed.", required: 1}
+                    { text: "Recall additional information associated with object noticed.", required: 1 }
                 ],
                 triumph: [
                     {
@@ -549,16 +549,16 @@ function SuggestionEngine () {
                     }
                 ],
                 threat: [
-                    {text: "Conceal a vital detail about situation or environment.", required: 1}
+                    { text: "Conceal a vital detail about situation or environment.", required: 1 }
                 ],
                 despair: [
-                    {text: "Obtain false information about surroundings or target.", required: 1}
+                    { text: "Obtain false information about surroundings or target.", required: 1 }
                 ]
             },
             PilotingPlanetary: {
                 success: [
-                    {text: "Gain insights into situation.", required: 1},
-                    {text: "Deduce way to modify vehicle to make it more effective in future.", required: 1}
+                    { text: "Gain insights into situation.", required: 1 },
+                    { text: "Deduce way to modify vehicle to make it more effective in future.", required: 1 }
                 ],
                 advantage: [
                     {
@@ -567,7 +567,7 @@ function SuggestionEngine () {
                     }
                 ],
                 triumph: [
-                    {text: "Grant additional maneuver while continuing to pilot vehicle.", required: 1}
+                    { text: "Grant additional maneuver while continuing to pilot vehicle.", required: 1 }
                 ],
                 threat: [
                     {
@@ -584,8 +584,8 @@ function SuggestionEngine () {
             },
             PilotingSpace: {
                 success: [
-                    {text: "Gain insights into situation.", required: 1},
-                    {text: "Deduce way to modify vehicle to make it more effective in future.", required: 1}
+                    { text: "Gain insights into situation.", required: 1 },
+                    { text: "Deduce way to modify vehicle to make it more effective in future.", required: 1 }
                 ],
                 advantage: [
                     {
@@ -594,7 +594,7 @@ function SuggestionEngine () {
                     }
                 ],
                 triumph: [
-                    {text: "Grant additional maneuver while continuing to pilot vehicle.", required: 1}
+                    { text: "Grant additional maneuver while continuing to pilot vehicle.", required: 1 }
                 ],
                 threat: [
                     {
@@ -611,16 +611,16 @@ function SuggestionEngine () {
             },
             Resilience: {
                 success: [
-                    {text: "Extend effects of the success to increase time between checks.", required: 1}
+                    { text: "Extend effects of the success to increase time between checks.", required: 1 }
                 ],
                 advantage: [
-                    {text: "Identify way to reduce difficulty of future checks against same threat.", required: 1}
+                    { text: "Identify way to reduce difficulty of future checks against same threat.", required: 1 }
                 ],
                 triumph: [
-                    {text: "Recover 3 strain.", required: 1}
+                    { text: "Recover 3 strain.", required: 1 }
                 ],
                 threat: [
-                    {text: "Overburden the character, inflicting penalties on subsequent checks.", required: 1}
+                    { text: "Overburden the character, inflicting penalties on subsequent checks.", required: 1 }
                 ],
                 despair: [
                     {
@@ -631,13 +631,13 @@ function SuggestionEngine () {
             },
             Skulduggery: {
                 success: [
-                    {text: "Gain additional insights about nature of opposition.", required: 1}
+                    { text: "Gain additional insights about nature of opposition.", required: 1 }
                 ],
                 advantage: [
-                    {text: "Identify additional potential target.", required: 1}
+                    { text: "Identify additional potential target.", required: 1 }
                 ],
                 triumph: [
-                    {text: "Earn an unexpected boon.", required: 1}
+                    { text: "Earn an unexpected boon.", required: 1 }
                 ],
                 threat: [
                     {
@@ -646,50 +646,50 @@ function SuggestionEngine () {
                     }
                 ],
                 despair: [
-                    {text: "Leave behind evidence of larceny.", required: 1}
+                    { text: "Leave behind evidence of larceny.", required: 1 }
                 ]
             },
             Stealth: {
                 success: [
-                    {text: "Assist allied character infiltrating at same time.", required: 1}
+                    { text: "Assist allied character infiltrating at same time.", required: 1 }
                 ],
                 advantage: [
-                    {text: "Decrease time taken to perform action while hidden.", required: 1}
+                    { text: "Decrease time taken to perform action while hidden.", required: 1 }
                 ],
                 triumph: [
-                    {text: "Identify way to completely distract opponent for duration of scene.", required: 1}
+                    { text: "Identify way to completely distract opponent for duration of scene.", required: 1 }
                 ],
                 threat: [
-                    {text: "Increase time taken to perform action while hidden by 20%.", required: 1}
+                    { text: "Increase time taken to perform action while hidden by 20%.", required: 1 }
                 ],
                 despair: [
-                    {text: "Leave behind evidence of passing, concerning identity and possibly motive.", required: 1}
+                    { text: "Leave behind evidence of passing, concerning identity and possibly motive.", required: 1 }
                 ]
             },
             Streetwise: {
                 success: [
-                    {text: "Reduce time or funds required to obtain item, information or service.", required: 1}
+                    { text: "Reduce time or funds required to obtain item, information or service.", required: 1 }
                 ],
                 advantage: [
-                    {text: "Reveal additional rumours or alternative sources.", required: 1}
+                    { text: "Reveal additional rumours or alternative sources.", required: 1 }
                 ],
                 triumph: [
-                    {text: "Gain semi-permanent contact on street.", required: 1}
+                    { text: "Gain semi-permanent contact on street.", required: 1 }
                 ],
                 threat: [
-                    {text: "Seed gathered information with minor falsehoods.", required: 1}
+                    { text: "Seed gathered information with minor falsehoods.", required: 1 }
                 ],
                 despair: [
-                    {text: "Character lets slip details about self or information sought.", required: 1}
+                    { text: "Character lets slip details about self or information sought.", required: 1 }
                 ]
             },
             Survival: {
                 success: [
-                    {text: "Assist other character in surviving.", required: 1},
-                    {text: "Stockpile goods to increase time between checks.", required: 1}
+                    { text: "Assist other character in surviving.", required: 1 },
+                    { text: "Stockpile goods to increase time between checks.", required: 1 }
                 ],
                 advantage: [
-                    {text: "Gain insight into environment to make future checks simpler.", required: 1},
+                    { text: "Gain insight into environment to make future checks simpler.", required: 1 },
                     {
                         text: "When tracking, learn significant detail about target, such as number, species or how recently tracks were made.",
                         required: 1
@@ -700,27 +700,27 @@ function SuggestionEngine () {
                         text: "When handling domesticated animal, predispose animal towards character earning loyal companion.",
                         required: 1
                     },
-                    {text: "When tracking, learn vital clue about target.", required: 1}
+                    { text: "When tracking, learn vital clue about target.", required: 1 }
                 ],
                 threat: [
-                    {text: "Spend vital resources (food, fuel, etc.) during check.", required: 1}
+                    { text: "Spend vital resources (food, fuel, etc.) during check.", required: 1 }
                 ],
                 despair: [
-                    {text: "Inflict wounds, Critical Injuries or large amounts of strain on character.", required: 1}
+                    { text: "Inflict wounds, Critical Injuries or large amounts of strain on character.", required: 1 }
                 ]
             },
             Vigilance: {
                 success: [
-                    {text: "Character is particularly well prepared.", required: 1}
+                    { text: "Character is particularly well prepared.", required: 1 }
                 ],
                 advantage: [
-                    {text: "Notice key environmental factor.", required: 1}
+                    { text: "Notice key environmental factor.", required: 1 }
                 ],
                 triumph: [
-                    {text: "Gain extra maneuver during first round of combat.", required: 1}
+                    { text: "Gain extra maneuver during first round of combat.", required: 1 }
                 ],
                 threat: [
-                    {text: "Miss key piece of information about situation or environment.", required: 1}
+                    { text: "Miss key piece of information about situation or environment.", required: 1 }
                 ],
                 despair: [
                     {
@@ -742,9 +742,9 @@ function SuggestionEngine () {
                     "Gunnery"
                 ],
                 '1advantage1triumph': [
-                    {text: "Recover 1 strain", advantage: 1, triumph: 1},
-                    {text: "Add $BOOST$ to the next allied active character's next check.", advantage: 1, triumph: 1},
-                    {text: "Notice a single important point in the ongoing conflict.", advantage: 1, triumph: 1},
+                    { text: "Recover 1 strain", advantage: 1, triumph: 1 },
+                    { text: "Add $BOOST$ to the next allied active character's next check.", advantage: 1, triumph: 1 },
+                    { text: "Notice a single important point in the ongoing conflict.", advantage: 1, triumph: 1 },
                     {
                         text: "Inflict a Critical Injury with a successful attack that deals damage past soak. ($ADVANTAGE$ cost may vary)",
                         advantage: 1,
@@ -753,13 +753,13 @@ function SuggestionEngine () {
                     }
                 ],
                 '2advantage1triumph': [
-                    {text: "Activate a weapon quality ($ADVANTAGE$ cost may vary)", advantage: 2, triumph: 1},
+                    { text: "Activate a weapon quality ($ADVANTAGE$ cost may vary)", advantage: 2, triumph: 1 },
                     {
                         text: "Perform an immediate free maneuver that does not exceed the two maneuver per turn limit",
                         advantage: 2,
                         triumph: 1
                     },
-                    {text: "Add $SETBACK$ to the targeted character's next check.", advantage: 2, triumph: 1},
+                    { text: "Add $SETBACK$ to the targeted character's next check.", advantage: 2, triumph: 1 },
                     {
                         text: "Add $BOOST$ to any allied character's next check, including that of the active character.",
                         advantage: 2,
@@ -794,12 +794,12 @@ function SuggestionEngine () {
                     }
                 ],
                 '1triumph': [
-                    {text: "Upgrade the difficulty of the targeted character's next check.", triumph: 1},
+                    { text: "Upgrade the difficulty of the targeted character's next check.", triumph: 1 },
                     {
                         text: "Upgrade any allied character's next check, including that of the current active character.",
                         triumph: 1
                     },
-                    {text: "Do something vital, such as shooting the controls to the nearby blast doors.", triumph: 1}
+                    { text: "Do something vital, such as shooting the controls to the nearby blast doors.", triumph: 1 }
                 ],
                 '2triumph': [
                     {
@@ -808,12 +808,12 @@ function SuggestionEngine () {
                     }
                 ],
                 '1threat1despair': [
-                    {text: "The active character suffers 1 strain", threat: 1, despair: 1},
-                    {text: "The active character looses the benefits of a prior maneuver", threat: 1, despair: 1}
+                    { text: "The active character suffers 1 strain", threat: 1, despair: 1 },
+                    { text: "The active character looses the benefits of a prior maneuver", threat: 1, despair: 1 }
                 ],
                 '2threat1despair': [
-                    {text: "An opponent may immediately perform one free maneuver.", threat: 2, despair: 1},
-                    {text: "Add $BOOST$ to the targeted character's next check", threat: 2, despair: 1},
+                    { text: "An opponent may immediately perform one free maneuver.", threat: 2, despair: 1 },
+                    { text: "Add $BOOST$ to the targeted character's next check", threat: 2, despair: 1 },
                     {
                         text: "The active character or an allied character suffers a $SETBACK$ on their next action.",
                         threat: 2,
@@ -821,7 +821,7 @@ function SuggestionEngine () {
                     }
                 ],
                 '3threat1despair': [
-                    {text: "The active character falls prone.", threat: 3, despair: 1},
+                    { text: "The active character falls prone.", threat: 3, despair: 1 },
                     {
                         text: "The active character grants the enemy a significant advantage in the ongoing encounter.",
                         threat: 3,
@@ -829,12 +829,12 @@ function SuggestionEngine () {
                     }
                 ],
                 '1despair': [
-                    {text: "The character's ranged weapon immediately runs out of ammunition.", despair: 1},
+                    { text: "The character's ranged weapon immediately runs out of ammunition.", despair: 1 },
                     {
                         text: "Upgrade the difficulty of an allied character's next check, including the active character.",
                         despair: 1
                     },
-                    {text: "The tool or melee weapon the character is using becomes damaged.", despair: 1}
+                    { text: "The tool or melee weapon the character is using becomes damaged.", despair: 1 }
                 ]
             },
             vehicle: {
@@ -851,7 +851,7 @@ function SuggestionEngine () {
                         advantage: 1,
                         triumph: 1
                     },
-                    {text: "Notice a single important point in the ongoing conflict.", advantage: 1, triumph: 1},
+                    { text: "Notice a single important point in the ongoing conflict.", advantage: 1, triumph: 1 },
                     {
                         text: "Inflict a Critical Hit with successful attack that deals damage past armor ($ADVANTAGE$ cost may vary)",
                         advantage: 1,
@@ -860,7 +860,7 @@ function SuggestionEngine () {
                     }
                 ],
                 '2advantage1triumph': [
-                    {text: "Activate a weapon quality ($ADVANTAGE$ cost may vary", advantage: 2, triumph: 1},
+                    { text: "Activate a weapon quality ($ADVANTAGE$ cost may vary", advantage: 2, triumph: 1 },
                     {
                         text: "Perform an immediate free maneuver, provided the active character has not already performed two maneuvers in that turn.",
                         advantage: 2,
@@ -910,7 +910,7 @@ function SuggestionEngine () {
                     }
                 ],
                 '2triumph': [
-                    {text: "Destroy an important component when dealing damage.", triumph: 2}
+                    { text: "Destroy an important component when dealing damage.", triumph: 2 }
                 ],
                 '1threat1despair': [
                     {
@@ -918,7 +918,7 @@ function SuggestionEngine () {
                         threat: 1,
                         despair: 1
                     },
-                    {text: "The active character looses the benefits of a prior maneuver.", threat: 1, despair: 1},
+                    { text: "The active character looses the benefits of a prior maneuver.", threat: 1, despair: 1 },
                     {
                         text: "The character's active ship suffers 1 system strain. (This option may be selected multiple times)",
                         threat: 1,
@@ -926,7 +926,7 @@ function SuggestionEngine () {
                     }
                 ],
                 '2threat1despair': [
-                    {text: "An opponent may immediately perform one free maneuver.", threat: 2, despair: 1},
+                    { text: "An opponent may immediately perform one free maneuver.", threat: 2, despair: 1 },
                     {
                         text: "Add $BOOST$ to the targeted character's next Piloting or Gunnery Check",
                         threat: 2,
@@ -944,7 +944,7 @@ function SuggestionEngine () {
                         threat: 3,
                         despair: 1
                     },
-                    {text: "The enemy gains a significant advantage in the ongoing encounter.", threat: 3, despair: 1},
+                    { text: "The enemy gains a significant advantage in the ongoing encounter.", threat: 3, despair: 1 },
                     {
                         text: "The primary weapon system of the active character's ship (or weapon the character is manning if acting as a gunner) suffers a Component Critical Hit.",
                         despair: 1
@@ -971,17 +971,17 @@ function SuggestionEngine () {
 
     this.enum = {
         types: {
-            general: {number:0, text:"general"},
-            combat: {number:1, text:"combat"}
+            general: { number: 0, text: "general" },
+            combat: { number: 1, text: "combat" }
         },
         displayOptions: {
-            none: {number:0, text:"none"},          // Suggestions are not displayed
-            whisper: {number:1, text:"whisper"},    // Suggestions are whispered to the GM
-            always: {number:2, text:"always"}       // Suggestions are included in the dice roll result
+            none: { number: 0, text: "none" },          // Suggestions are not displayed
+            whisper: { number: 1, text: "whisper" },    // Suggestions are whispered to the GM
+            always: { number: 2, text: "always" }       // Suggestions are included in the dice roll result
         },
         combatType: {
-            personal: {number:0, text:"personal"},
-            vehicle: {number:1, text:"vehicle"}
+            personal: { number: 0, text: "personal" },
+            vehicle: { number: 1, text: "vehicle" }
         }
     };
 
@@ -1001,10 +1001,10 @@ function SuggestionEngine () {
     this.setGeneralSuggestions = function (input) {
         if (input == null || input === "")
             return;
-        log("input="+input);
+        log("input=" + input);
 
         flags.generalSuggesting = convertToBoolean(input);
-        log("flags.generalSuggesting="+flags.generalSuggesting);
+        log("flags.generalSuggesting=" + flags.generalSuggesting);
     };
 
     this.getGeneralSuggesting = function () {
@@ -1014,9 +1014,9 @@ function SuggestionEngine () {
     this.setCombatSuggestions = function (input) {
         if (input == null || input === "")
             return;
-        log("input="+input);
+        log("input=" + input);
         flags.combatSuggesting = convertToBoolean(input);
-        log("flags.combatSuggesting="+flags.combatSuggesting);
+        log("flags.combatSuggesting=" + flags.combatSuggesting);
     };
 
     this.getCombatSuggesting = function () {
@@ -1055,7 +1055,7 @@ function SuggestionEngine () {
 
         var retVal = null;
 
-        Object.keys(enumToUse).some(function(key) {
+        Object.keys(enumToUse).some(function (key) {
             var object = enumToUse[key];
 
             if (input == object || input === object.text || input === object.number) {
@@ -1086,7 +1086,7 @@ function SuggestionEngine () {
 
 
     /* Suggestion Handling */
-    function addSkillSuggestionsFromArray (diceObj, array, key, rollResultForSymbol, suggestionsType) {
+    function addSkillSuggestionsFromArray(diceObj, array, key, rollResultForSymbol, suggestionsType) {
         for (var i = 0; i < array.length; i++) {
             if (array[i].required <= rollResultForSymbol) {
                 suggestionsType[key] += "<li>" + array[i].text + "</li>";
@@ -1096,7 +1096,7 @@ function SuggestionEngine () {
         return diceObj;
     }
 
-    function buildSuggestionSet (suggestionSet, symbol, rollResultForSymbol, suggestionJSON) {
+    function buildSuggestionSet(suggestionSet, symbol, rollResultForSymbol, suggestionJSON) {
         if (suggestionSet == null)
             suggestionSet = new Set();
 
@@ -1111,10 +1111,10 @@ function SuggestionEngine () {
         return suggestionSet;
     }
 
-    function buildCombatSuggestions (diceObj, symbol, rollResultForSymbol, suggestionJSON) {
+    function buildCombatSuggestions(diceObj, symbol, rollResultForSymbol, suggestionJSON) {
         var suggestionSet = null;
         var spendingSuggestions = diceObj.vars.suggestions;
-        Object.keys(suggestionJSON).forEach(function(property) {
+        Object.keys(suggestionJSON).forEach(function (property) {
             if (property === "AllowedSkills")
                 return;
 
@@ -1130,11 +1130,11 @@ function SuggestionEngine () {
         return diceObj;
     }
 
-    function buildRollTemplateItem (key, value) {
+    function buildRollTemplateItem(key, value) {
         return "{{" + key + "=<ul>" + value + "</ul>}}";
     }
 
-    function generateSuggestions (diceObj, symbol, rollResultForSymbol) {
+    function generateSuggestions(diceObj, symbol, rollResultForSymbol) {
         var skillName = diceObj.vars.skillName;
 
         var combatType = flags.combatType;
@@ -1142,12 +1142,10 @@ function SuggestionEngine () {
             var combatSkills = that.suggestions.combat;
             var personal = that.enum.combatType.personal;
             var vehicle = that.enum.combatType.vehicle;
-            if (combatType == personal)
-            {
+            if (combatType == personal) {
                 diceObj = buildCombatSuggestions(diceObj, symbol, rollResultForSymbol, combatSkills.personal);
             }
-            else if (combatType == vehicle)
-            {
+            else if (combatType == vehicle) {
                 diceObj = buildCombatSuggestions(diceObj, symbol, rollResultForSymbol, combatSkills.vehicle);
             }
         } else if (flags.generalSuggesting) {
@@ -1168,7 +1166,7 @@ function SuggestionEngine () {
         return diceObj;
     }
 
-    this.processSuggestions = function(diceObj) {
+    this.processSuggestions = function (diceObj) {
         if (flags.displayOption === that.enum.displayOptions.none)
             return diceObj;
 
@@ -1198,7 +1196,7 @@ function SuggestionEngine () {
 
 
         var failedCheck = !diceObj.totals.success > 0;
-        Object.keys(diceObj.totals).forEach(function(key) {
+        Object.keys(diceObj.totals).forEach(function (key) {
             var rollResultForSymbol = diceObj.totals[key];
             if (rollResultForSymbol > 0) {
                 diceObj = generateSuggestions(diceObj, key, rollResultForSymbol, failedCheck);
@@ -1218,7 +1216,7 @@ function SuggestionEngine () {
                 return;
 
             var propertyObject = suggestions[property];
-            Object.keys(propertyObject).forEach(function(symbol) {
+            Object.keys(propertyObject).forEach(function (symbol) {
                 var object = propertyObject[symbol];
 
                 if (!object)
@@ -1376,8 +1374,8 @@ eote.defaults = {
 var GMSheet = eote.defaults.GMSheet;
 var suggestionEngine = new SuggestionEngine();
 
-function buildReplacementObject (title, src, size) {
-    return {matcher: new RegExp("\\$" + title.toUpperCase() + "\\$","g"), replacer: '<img src="' + src + '" title="' + title + '" height="' + size + '" width="' + size + '"/>'};
+function buildReplacementObject(title, src, size) {
+    return { matcher: new RegExp("\\$" + title.toUpperCase() + "\\$", "g"), replacer: '<img src="' + src + '" title="' + title + '" height="' + size + '" width="' + size + '"/>' };
 }
 
 // dice symbols
@@ -1749,10 +1747,10 @@ eote.process.setup = function (cmd, playerName, playerID) {
     if (skillMatch) {
         suggestionEngine.setIsFearCheck(getAttrByName(GMSheet.obj.id, "skill_suggestion_setting_fear"));
         var CombatSuggestions = getAttrByName(GMSheet.obj.id, "skill_suggestion_setting_combat");
-        log("CombatSuggestions="+CombatSuggestions);
+        log("CombatSuggestions=" + CombatSuggestions);
         suggestionEngine.setCombatSuggestions(getAttrByName(GMSheet.obj.id, "skill_suggestion_setting_combat"));
         var generalSuggestions = getAttrByName(GMSheet.obj.id, "skill_suggestion_setting_general");
-        log("generalSuggestions="+generalSuggestions);
+        log("generalSuggestions=" + generalSuggestions);
         suggestionEngine.setGeneralSuggestions(generalSuggestions);
         suggestionEngine.setIsFearCheck(getAttrByName(GMSheet.obj.id, "skill_suggestion_setting_fear"));
 
@@ -1846,7 +1844,7 @@ eote.process.log = function (cmd) {
      * Command: !eed log on|off|multi|single
      * ---------------------------------------------------------------- */
 
-     switch (cmd[1]) {
+    switch (cmd[1]) {
         case "on": //if 'on' outputs dice to chat window
             eote.defaults.globalVars.diceLogChat = true;
             sendChat("Dice System", 'Output rolled dice to chat window "On"');
@@ -2036,10 +2034,10 @@ eote.process.rollPlayer = function (cmd, diceObj) {
         }
 
         var cmdSkill;
-        if(!isNaN((parseFloat(attr_1)) && isFinite(attr_1))) { // is numeric
+        if (!isNaN((parseFloat(attr_1)) && isFinite(attr_1))) { // is numeric
             cmdSkill = ['skill(' + attr_1 + '|' + attr_2 + ')']; //['skill(0|2)']
         } else {
-            var attr_3 =  getAttrByName(diceObj.vars.characterID, attr_1.substr(2,attr_1.length-3));
+            var attr_3 = getAttrByName(diceObj.vars.characterID, attr_1.substr(2, attr_1.length - 3));
             cmdSkill = ['skill(' + attr_3 + '|' + attr_2 + ')']; //['skill(0|2)']
         }
 
@@ -2084,14 +2082,14 @@ eote.process.destiny = function (cmd, diceObj) {
                 darkSide = darkSide - 1;
                 lightSide = lightSide + 1;
 
-                displayPool = '/direct &{template:base} {{title=' + 'The GM flips a Dark Side Destiny Point' + '}}';
-                displayPool = displayPool + '{{Dark Side points remaining=' + darkSide + '}}';
-                displayPool = displayPool + '{{New Light Side total=' + lightSide + '}}';
+                displayPool = '/direct &{template:base} {{title=' + 'The GM flips a GM Story Point' + '}}';
+                displayPool = displayPool + '{{GM Story points remaining=' + darkSide + '}}';
+                displayPool = displayPool + '{{New Player Story Point total=' + lightSide + '}}';
 
                 sendChat('Dice System', displayPool);
             }
             else {
-                sendChat("GM", "/w " + "gm There are no Dark Side points left in the Destiny Pool. Encourage your Players to use a Light Side Point." );
+                sendChat("GM", "/w " + "gm There are no GM Story Points left in the Story Point Pool. Encourage your Players to use a Player Story Point.");
                 return doRoll;
             }
             break;
@@ -2100,14 +2098,14 @@ eote.process.destiny = function (cmd, diceObj) {
                 lightSide = lightSide - 1;
                 darkSide = darkSide + 1;
 
-                displayPool = '/direct &{template:base} {{title=' + diceObj.vars.characterName + ' flips a Light Side Destiny Point' + '}}';
-                displayPool = displayPool + '{{New Dark Side total=' + darkSide + '}}';
-                displayPool = displayPool + '{{Light Side points remaining=' + lightSide + '}}';
+                displayPool = '/direct &{template:base} {{title=' + diceObj.vars.characterName + ' flips a Player Story Point' + '}}';
+                displayPool = displayPool + '{{New GM Story Point total=' + darkSide + '}}';
+                displayPool = displayPool + '{{Player Story Points remaining=' + lightSide + '}}';
 
                 sendChat('Dice System', displayPool);
             }
             else {
-                sendChat("Dice System", "/w " + diceObj.vars.characterName + " There are no Light Side points left in the Destiny Pool. Suggest to your GM to use a Dark Side point to make one available.");
+                sendChat("Dice System", "/w " + diceObj.vars.characterName + " There are no Player Story Points left in the Story Point Pool. Suggest to your GM to use a GM Story Point to make one available.");
                 return doRoll;
             }
             break;
@@ -2117,7 +2115,7 @@ eote.process.destiny = function (cmd, diceObj) {
         // falls through on purpose (I think) to sync automatically when destiny point is rolled
         case "registerPlayer":
             if (!doRoll) {
-                sendChat("Dice System", "/w " + diceObj.vars.characterName + '&{template:base} {{title=Syncing your Destiny Pool to the GM\'s}}')
+                sendChat("Dice System", "/w " + diceObj.vars.characterName + '&{template:base} {{title=Syncing your Story Point Pool to the GM\'s}}')
             }
             darkSide = darkSide + diceObj.totals.dark;
             lightSide = lightSide + diceObj.totals.light;
@@ -2128,10 +2126,10 @@ eote.process.destiny = function (cmd, diceObj) {
             }
             break;
         case "sendUpdate":
-            sendChat("Dice System", "Updating Players Destiny Pools");
+            sendChat("Dice System", "Updating Players' Story Point Pools");
             break;
         case "clearPool":
-            sendChat("Dice System", '&{template:base} {{title=The GM cleared the Destiny Pool}}');
+            sendChat("Dice System", '&{template:base} {{title=The GM cleared the Story Point Pool}}');
             lightSide = 0;
             darkSide = 0;
             break;
@@ -2198,13 +2196,13 @@ eote.process.label = function (cmd, diceObj) {
 
             switch (labelTest) {
                 case 'skill':
-                    labelStr = '{{title='+labelStr + message + '}}';
+                    labelStr = '{{title=' + labelStr + message + '}}';
                     break;
                 case 'dice':
-                    labelStr = '{{title='+labelStr + message + '}}';
+                    labelStr = '{{title=' + labelStr + message + '}}';
                     break;
                 case 'weapon':
-                    labelStr = '{{title='+labelStr + message + '}}';
+                    labelStr = '{{title=' + labelStr + message + '}}';
                     break;
                 default:
                     labelStr = labelStr + '{{' + label + '=' + message + '}}';
@@ -2711,10 +2709,10 @@ eote.process.crit = function (cmd, diceObj) {
         var rollOffset = parseInt(getAttrByName(diceObj.vars.characterID, type + '-critAddOffset'));
         rollOffset = rollOffset ? rollOffset : 0;
         var totalcrits = parseInt(getAttrByName(diceObj.vars.characterID, type + '-critTotal'));
-        if(!totalcrits){
+        if (!totalcrits) {
             totalcrits = 0;
         }
-        
+
         //roll random
         if (!addCritNum) {
             diceRoll = randomInteger(100);
@@ -2728,23 +2726,23 @@ eote.process.crit = function (cmd, diceObj) {
             rollTotal = parseInt(addCritNum);
         }
         //find crit in critical table
-        if(type=="character" || type=="npc" || type == "companion" || type=="beast"){
+        if (type == "character" || type == "npc" || type == "companion" || type == "beast") {
             critTable = critTableLifeform;
         }
-        if(type=="starship" || type=="vehicle"){
-            critTable = critTableMachine;            
+        if (type == "starship" || type == "vehicle") {
+            critTable = critTableMachine;
         }
         for (var key in critTable) {
             var percent = critTable[key].percent.split(' to ');
             var low = parseInt(percent[0]);
             var high = percent[1] ? parseInt(percent[1]) : 1000;
-           
+
             if ((rollTotal >= low) && (rollTotal <= high)) {
 
                 critAttrs = [
                     {
                         name: type + '-critTotal',
-                        current: totalcrits+1,
+                        current: totalcrits + 1,
                         max: '',
                         update: true
                     },
@@ -2757,7 +2755,7 @@ eote.process.crit = function (cmd, diceObj) {
                         update: true
                     },
                     {
-                        name: type + '-critSeverity' ,
+                        name: type + '-critSeverity',
                         current: critTable[key].severity,
                         max: '',
                         update: true
@@ -2775,7 +2773,7 @@ eote.process.crit = function (cmd, diceObj) {
                         update: true
                     },
                 ];
-                var chat = '/direct &{template:base} {{title='+type.charAt(0).toUpperCase()+type.slice(1)+' Critical}} ';
+                var chat = '/direct &{template:base} {{title=' + type.charAt(0).toUpperCase() + type.slice(1) + ' Critical}} ';
                 chat = chat + '{{subtitle=' + diceObj.vars.characterName + '}}';
                 chat = chat + '{{Previous Criticals=' + totalcrits + ' x 10}}';
                 if (rollOffset) {
@@ -2790,14 +2788,14 @@ eote.process.crit = function (cmd, diceObj) {
             }
         }
         eote.updateAddAttribute(characterObj, critAttrs);
-        eote.process.createRepeatingCrit(type,characterObj,critAttrs2);
+        eote.process.createRepeatingCrit(type, characterObj, critAttrs2);
     };
     var critHeal = function (critID, type) {
         log(critID);
         log(type);
         var rowid = critID;
         var regex = new RegExp('^repeating_.*?_' + rowid + '_.*?$');
-        var attrsInRow = filterObjs(function(obj) {
+        var attrsInRow = filterObjs(function (obj) {
             if (obj.get('type') !== 'attribute' || obj.get('characterid') !== diceObj.vars.characterID) return false;
             return regex.test(obj.get('name'));
         });
@@ -2808,7 +2806,7 @@ eote.process.crit = function (cmd, diceObj) {
         critAttrs = [
             {
                 name: type + '-critTotal',
-                current: totalcrits-1,
+                current: totalcrits - 1,
                 max: '',
                 update: true
             },
@@ -2834,12 +2832,12 @@ eote.process.crit = function (cmd, diceObj) {
         critRoll(null, type);
     }
 };
-eote.process.createRepeatingCrit = function(type,charactersObj,critAttrs) {
-    eote.process.logger("repeating","repeating");
-    eote.process.logger("type",type);
-    eote.process.logger("critAttrs",critAttrs);
+eote.process.createRepeatingCrit = function (type, charactersObj, critAttrs) {
+    eote.process.logger("repeating", "repeating");
+    eote.process.logger("type", type);
+    eote.process.logger("critAttrs", critAttrs);
     var newId = eote.process.generateRowID();
-   //check if object or array
+    //check if object or array
     if (!_.isArray(charactersObj)) {
         charactersObj = [charactersObj];
     }
@@ -2876,29 +2874,29 @@ eote.process.createRepeatingCrit = function(type,charactersObj,critAttrs) {
                         attr.set({ max: critAttr.max ? critAttr.max : '' });
                     }
                 } else {
-                     log('Add Attr: '+ critAttr.name);
-                     log( 'Value: '+ critAttr.current);
+                    log('Add Attr: ' + critAttr.name);
+                    log('Value: ' + critAttr.current);
                     eote.createObj('attribute', {
                         characterid: characterObj.id,
-                        name: "repeating_crit"+type+"_" + newId + "_" + critAttr.name,
+                        name: "repeating_crit" + type + "_" + newId + "_" + critAttr.name,
                         current: critAttr.current,
                         max: critAttr.max ? critAttr.max : ''
                     });
                 }
             });
         }
-    });   
+    });
     eote.createObj('attribute', {
         characterid: characterId,
-        name: "repeating_crit"+type+"_" + newId + "_"+type+"-critId",
+        name: "repeating_crit" + type + "_" + newId + "_" + type + "-critId",
         current: newId
-    }); 
-       
+    });
+
 };
 
 
 
- eote.process.generateRowID = function () {
+eote.process.generateRowID = function () {
     "use strict";
     var a = 0, b = [];
     var c = (new Date()).getTime() + 0, d = c === a;
@@ -2918,11 +2916,11 @@ eote.process.createRepeatingCrit = function(type,charactersObj,critAttrs) {
             b[f] = Math.floor(64 * Math.random());
         }
     }
-    for (f = 0; 12 > f; f++){
+    for (f = 0; 12 > f; f++) {
         c += "-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz".charAt(b[f]);
     }
     return c.replace(/_/g, "Z");
- };
+};
 
 
 eote.process.gmdice = function (cmd) {
@@ -3006,7 +3004,7 @@ eote.process.skill = function (cmd, diceObj) {
             matchRegSkillWOSkillName: /\((.*?)\|(.*?)\)/
         };
         var diceArray = null;
-        Object.keys(matchers).some(function(key) {
+        Object.keys(matchers).some(function (key) {
             if ((diceArray = skill.match(matchers[key])) != null) {
                 return true;
             }
@@ -3596,16 +3594,16 @@ eote.process.diceOutput = function (diceObj, playerName, playerID) {
     }
 
     var templateName = (diceObj.vars.suggestions.suggestionsExist
-    && suggestionEngine.getDisplayOption() == suggestionEngine.enum.displayOptions.always ? "suggestion" : "base");
+        && suggestionEngine.getDisplayOption() == suggestionEngine.enum.displayOptions.always ? "suggestion" : "base");
 
     /*Dice roll images work just fine when whispered*/
     var label = diceObj.vars.label;
     if (eote.defaults.globalVars.diceTestEnabled === true) {
         chatGlobal = "/direct <br>6b 8g 12y 6blk 8p 12r 12w <br>";
     } else if (label) {
-        chatGlobal = "/direct &{template:" + templateName +"} " + diceObj.vars.label + "{{subtitle=" + characterPlayer + "}}";
+        chatGlobal = "/direct &{template:" + templateName + "} " + diceObj.vars.label + "{{subtitle=" + characterPlayer + "}}";
     } else {
-        chatGlobal = "/direct &{template:" + templateName +"} {{title=" + characterPlayer + "}}";
+        chatGlobal = "/direct &{template:" + templateName + "} {{title=" + characterPlayer + "}}";
     }
     //------------------------------------>
     if (eote.defaults.globalVars.diceLogChat === true) {
@@ -3686,13 +3684,13 @@ eote.process.diceOutput = function (diceObj, playerName, playerID) {
                 suggestions = " {{suggestionsExist=true}} " + suggestions;
                 break;
             case null:
-              var msg = "No display option determined! Please set the display option on the " + eote.defaults.GMSheet.name;
-              log(msg);
-              sendChat("System", "/w gm " + msg);
-            break;
+                var msg = "No display option determined! Please set the display option on the " + eote.defaults.GMSheet.name;
+                log(msg);
+                sendChat("System", "/w gm " + msg);
+                break;
             default:
                 // this should never be entered
-                log("Report Me! A suggestionFlag of '"+ suggestionsFlag +"' is not handled properly!");
+                log("Report Me! A suggestionFlag of '" + suggestionsFlag + "' is not handled properly!");
         }
     }
 
@@ -4517,14 +4515,13 @@ eote.events = function () {
 // this only runs once per initialization of the script in order to prevent this process from running too frequently
 // this converts any $\w$ token that matches a defined list of tokens into a html image tag.
 function convertTokensToTags(skillSuggestions, symReplace) {
-    Object.keys(skillSuggestions).forEach(function(categoryKey) {
+    Object.keys(skillSuggestions).forEach(function (categoryKey) {
         var category = skillSuggestions[categoryKey];
-        Object.keys(category).forEach(function(categoryElemKey) {
+        Object.keys(category).forEach(function (categoryElemKey) {
             var categoryElem = category[categoryElemKey];
-            Object.keys(categoryElem).forEach(function(symbolKey) {
+            Object.keys(categoryElem).forEach(function (symbolKey) {
                 var item = categoryElem[symbolKey];
-                for (var i = 0; i < item.length; i++)
-                {
+                for (var i = 0; i < item.length; i++) {
                     var itemElem = item[i];
                     if (typeof itemElem == "object") {
                         if (itemElem.text.indexOf("$") > 0) {
@@ -4540,6 +4537,6 @@ function convertTokensToTags(skillSuggestions, symReplace) {
     log("Finished converting tokens to tags");
 }
 
-on('ready', function() {
+on('ready', function () {
     eote.init();
 });
