@@ -9,3 +9,4 @@ Change Log
 -----
 0.01 Initial Build <br>
 0.02 Added Translation.json and fixed coding errors.
+0.03 Fixed an issue that was causing an error with the dice roller.
