@@ -9,7 +9,7 @@
         <table>
             <tr>
                 <td><label>Version</label></td>
-                <td>0.0.2</td>
+                <td>0.0.3</td>
                 <td style="width: 28%;"><label data-i18n="moreinfo">For more information on this version visit:</label></td>
                 <td><input disabled value="https://https://wiki.roll20.net/Genesys" type="text" /></td>
             </tr>
@@ -63,7 +63,7 @@
                                 </label>
                             </td>
                             <td class="sheet-force">
-                                <input type='hidden' name='attr_dicePool' value='@{g}g @{y}y @{p}p @{r}r @{b}b @{blk}blk @{w}w upgrade(ability|@{upgradeAbility}) downgrade(proficiency|@{downgradeProficiency}) upgrade(difficulty|@{upgradeDifficulty}) downgrade(challenge|@{downgradeChallenge})' />
+                                <input type='hidden' name='attr_dicePool' value='@{g}g @{y}y @{p}p @{r}r @{b}b @{blk}blk upgrade(ability|@{upgradeAbility}) downgrade(proficiency|@{downgradeProficiency}) upgrade(difficulty|@{upgradeDifficulty}) downgrade(challenge|@{downgradeChallenge})' />
                                 <button type='roll' name='roll_DicePool' value='!eed characterID(@{character_id}) label(Dice:Dice Pool) @{dicePool} (gmdice)'></button>
                                 <button type='roll' name='roll_ResetDicePool' value='!eed resetdice characterID(@{character_id})'></button>
                             </td>
