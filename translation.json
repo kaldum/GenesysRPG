@@ -237,7 +237,7 @@
   "entrepreneur": "Entrepreneur",
   "equipment": "Equipment",
   "example:": "Example: <b>1b 1g</b> outputs <span class=\"sheet-icon-B\"></span><span class=\"sheet-icon-G\"></span>",
-  "exampletext": "b -> Blue = Boost, blk -> BLack = Setback<br>g -> Green = Ability, y -> Yellow = Proficiency<br>p-> Purple = Difficulty, r -> Red = Challenge<br>w -> White = Force<br>s = Success, f = Failure, a = Advantage, t = Threat",
+  "exampletext": "b -> Blue = Boost, blk -> BLack = Setback<br>g -> Green = Ability, y -> Yellow = Proficiency<br>p-> Purple = Difficulty, r -> Red = Challenge<br>w -> <br>s = Success, f = Failure, a = Advantage, t = Threat",
   "executioner": "Executioner",
   "expectedsessionstocomplete:": "Expected sessions to complete:",
   "explorer": "Explorer",
