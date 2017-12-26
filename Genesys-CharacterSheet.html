@@ -9,13 +9,9 @@
         <table>
             <tr>
                 <td><label>Version</label></td>
-                <td>
-                    0.0.1
-                </td>
-                <!--
+                <td>0.0.2</td>
                 <td style="width: 28%;"><label data-i18n="moreinfo">For more information on this version visit:</label></td>
-                <td><input disabled value="https://" type="text" /></td>
-                -->
+                <td><input disabled value="https://https://wiki.roll20.net/Genesys" type="text" /></td>
             </tr>
         </table><!--Version Info-->
     </div>
@@ -50,7 +46,7 @@
                             <td class="sheet-light"><img src="http://i.imgur.com/nlIAfJx.png" /><input name="attr_b" type="number" step="1" max="9" min="0" value="0"></td>
                             <td class="sheet-light"><img src="http://i.imgur.com/g3hoJRG.png" /><input name="attr_g" type="number" step="1" max="9" min="0" value="0"></td>
                             <td class="sheet-light"><img src="http://i.imgur.com/4bQ0dY8.png" /><input name="attr_y" type="number" step="1" max="9" min="0" value="0"></td>
-                            <!-- <td class="sheet-force"><img src="http://i.imgur.com/JCI7Mgm.png" /><input name="attr_w" type="number" step="1" max="9" min="0" value="0"></td> -->
+                            <td></td>
                             <td class="sheet-dark"><img src="http://i.imgur.com/n9W07Lp.png" /><input name="attr_blk" type="number" step="1" max="9" min="-9" value="0"></td>
                             <td class="sheet-dark"><img src="http://i.imgur.com/oxbKghK.png" /><input name="attr_p" type="number" step="1" max="9" min="-7" value="0"></td>
                             <td class="sheet-dark"><img src="http://i.imgur.com/GInMHEN.png" /><input name="attr_r" type="number" step="1" max="9" min="-7" value="0"></td>
@@ -88,7 +84,7 @@
         </div><!-- Dice Pool -->
         <div class="sheet-clear"></div>
         <div class="sheet-row">
-            <h3 class="sheet-section-header" data-i18n="destinypool">Story Point Pools</h3>
+            <h3 class="sheet-section-header" data-i18n="storypointpool">Story Point Pools</h3>
             <input style="width: 250px;height: 30px;margin: -44px -20px 0 297px;float:left;" class="sheet-toggle sheet-destiny-section-toggle" type="checkbox" checked="checked" />
             <div class="sheet-destiny-section">
                 <table class="sheet-destiny" cellspacing="0" cellpadding="0" border="0">
@@ -102,7 +98,7 @@
                                 <input name='attr_light' value="@{lightSidePoints}" type="number" disabled />
                             </td>
                             <td>
-                                <button type='roll' class="sheet-btn-lightSide" name="Use-Darkside-Point" value='!eed characterID(@{character_id}) destiny useLight' data-i18n="uselight">&#8592; Use Light Side</button>
+                                <button type='roll' class="sheet-btn-lightSide" name="Use-Darkside-Point" value='!eed characterID(@{character_id}) destiny useLight' data-i18n="uselight">&#8592; Use Player Story Point</button>
                             </td>
                             <td>
                                 <label data-i18n="dark">GM</label>
@@ -205,9 +201,9 @@
                                     <td width="35%"><input type="text" name="attr_credits" /></td>
                                 </tr>
                                 <tr>
-                                    <td width="15%"><label data-i18n="species:">Career:</label></td>
+                                    <td width="15%"><label data-i18n="career:">Career:</label></td>
                                     <td width="35%"><input type="text" name='attr_career'></td>
-                                    <td width="15%"><label data-i18n="species:">Setting:</label></td>
+                                    <td width="15%"><label data-i18n="setting:">Setting:</label></td>
                                     <td width="35%"><input type="text" name='attr_storysetting'></td>
                                 </tr>
                                 <tr>
@@ -287,7 +283,7 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td><label data-i18n="category:">Desire:</label></td>
+                                        <td><label data-i18n="desire:">Desire:</label></td>
                                         <td><input type="text" name='attr_attr_motivation-cat' /></td>
                                         <td><label data-i18n="type:">Type:</label></td>
                                         <td><input type="text" name="attr_motivation-type" /></td>
@@ -295,7 +291,7 @@
                                         <td><textarea rows="2" name="attr_motivation-desc"></textarea></td>
                                     </tr>
                                     <tr>
-                                        <td><label data-i18n="category:">Fear:</label></td>
+                                        <td><label data-i18n="fear:">Fear:</label></td>
                                         <td><input type="text" name='attr_attr_motivation-cat2' /></td>
                                         <td><label data-i18n="type:">Type:</label></td>
                                         <td><input type="text" name="attr_motivation-type2" /></td>
@@ -303,7 +299,7 @@
                                         <td><textarea rows="2" name="attr_motivation-desc2"></textarea></td>
                                     </tr>
                                     <tr>
-                                        <td><label data-i18n="category:">Strength:</label></td>
+                                        <td><label data-i18n="strength:">Strength:</label></td>
                                         <td><input type="text" name='attr_attr_motivation-cat2' /></td>
                                         <td><label data-i18n="type:">Type:</label></td>
                                         <td><input type="text" name="attr_motivation-type2" /></td>
@@ -311,7 +307,7 @@
                                         <td><textarea rows="2" name="attr_motivation-desc2"></textarea></td>
                                     </tr>
                                     <tr>
-                                        <td><label data-i18n="category:">Flaw:</label></td>
+                                        <td><label data-i18n="flaw:">Flaw:</label></td>
                                         <td><input type="text" name='attr_attr_motivation-cat2' /></td>
                                         <td><label data-i18n="type:">Type:</label></td>
                                         <td><input type="text" name="attr_motivation-type2" /></td>
@@ -548,7 +544,7 @@
                             </tr><!--Discipline--><!--All Settings-->
                             <tr data-i18n-list-item="driving">
                                 <td>
-                                    <label data-i18n="drivingpag">Driving (Ag)</label>
+                                    <label data-i18n="drivingag">Driving (Ag)</label>
                                 </td>
                                 <td><input name='attr_careerskillDriving' type="checkbox" value="1"></td>
                                 <td><input type="number" name="attr_rankDriving" max="6" min="0" value="0" /></td>
@@ -636,9 +632,9 @@
                                 </td>
                                 <td><button type='roll' name='roll_Perception' value='!eed characterID(@{character_id}) label(skill:Perception) @{dicePerception} skill(@{rankPerception}|@{cunning}|Perception) @{dicePool} (gmdice)'></button></td>
                             </tr><!--Perception--><!--All Settings-->
-                            <tr data-i18n-list-item="pilotingp">
+                            <tr data-i18n-list-item="piloting">
                                 <td>
-                                    <label data-i18n="pilotingpag">Piloting (Ag)</label>
+                                    <label data-i18n="pilotingag">Piloting (Ag)</label>
                                 </td>
                                 <td><input name='attr_careerskillPlanetary' type="checkbox" value="1"></td>
                                 <td><input type="number" name="attr_rankPlanetary" max="6" min="0" value="0" /></td>
@@ -652,7 +648,7 @@
                                         <input type="text" name="attr_dicePlanetary" />
                                     </div>
                                 </td>
-                                <td><button type='roll' name='roll_Piloting' value='!eed characterID(@{character_id}) label(skill:Piloting - Planetary) @{dicePlanetary} encum(@{encumbrancemax}|@{encumbrance}) skill(@{rankPlanetary}|@{agility}|PilotingPlanetary) @{dicePool} (gmdice)'></button></td>
+                                <td><button type='roll' name='roll_Piloting' value='!eed characterID(@{character_id}) label(skill:Piloting) @{dicePlanetary} encum(@{encumbrancemax}|@{encumbrance}) skill(@{rankPlanetary}|@{agility}|PilotingPlanetary) @{dicePool} (gmdice)'></button></td>
                             </tr><!--Piloting-->
                             <tr data-i18n-list-item="resilience">
                                 <td>
@@ -785,31 +781,31 @@
                     <table class="sheet-skills" cellspacing="0" cellpadding="0" border="0" data-i18n-list="knowledge-skills-list">
                         <thead>
                             <tr>
-                                <th data-i18n="knowledgeskills">Magic Skills</th>
+                                <th data-i18n="magicskills">Magic Skills</th>
                                 <th data-i18n="career">Career</th>
                                 <th colspan="2" data-i18n="rank">Rank</th>
                                 <th colspan="2" data-i18n="mods">Mods</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr data-i18n-list-item="arcane">
+                            <tr data-i18n-list-item="arcana">
                                 <td>
-                                    <label data-i18n="arcanepr">Arcane (Int)</label>
+                                    <label data-i18n="arcanaint">Arcana (Int)</label>
                                 </td>
-                                <td><input name='attr_careerskillArcane' type="checkbox" value="1"></td>
-                                <td><input type="number" name="attr_rankArcane" max="6" min="0" value="0" /></td>
+                                <td><input name='attr_careerskillArcana' type="checkbox" value="1"></td>
+                                <td><input type="number" name="attr_rankArcana" max="6" min="0" value="0" /></td>
                                 <td>
-                                    <input class="sheet-yd" type="hidden" name="attr_yArcane" value="(((@{intellect} + @{rankArcane}) - abs(@{intellect} - @{rankArcane})) / 2)" disabled><span></span>
-                                    <input class="sheet-gd" type="hidden" name="attr_gArcane" value="((((@{intellect} + @{rankArcane}) + abs(@{intellect} - @{rankArcane})) / 2) - @{yArcane})" disabled><span></span>
+                                    <input class="sheet-yd" type="hidden" name="attr_yArcana" value="(((@{intellect} + @{rankArcana}) - abs(@{intellect} - @{rankArcana})) / 2)" disabled><span></span>
+                                    <input class="sheet-gd" type="hidden" name="attr_gArcana" value="((((@{intellect} + @{rankArcana}) + abs(@{intellect} - @{rankArcana})) / 2) - @{yArcana})" disabled><span></span>
                                 </td>
                                 <td>
                                     <div class="sheet-dice-icon"></div>
                                     <div class="sheet-dice-input">
-                                        <input type="text" name="attr_diceArcane" />
+                                        <input type="text" name="attr_diceArcana" />
                                     </div>
                                 </td>
-                                <td><button type='roll' name='roll_Arcane' value='!eed characterID(@{character_id}) label(skill:Arcane) @{diceArcane} skill(@{rankArcane}|@{intellect}|Arcane) @{dicePool} (gmdice)'></button></td>
-                            </tr><!--Arcane--><!--All Settings-->
+                                <td><button type='roll' name='roll_Arcana' value='!eed characterID(@{character_id}) label(skill:Arcana) @{diceArcana} skill(@{rankArcana}|@{intellect}|Arcana) @{dicePool} (gmdice)'></button></td>
+                            </tr><!--Arcana--><!--All Settings-->
                             <tr data-i18n-list-item="divine">
                                 <td>
                                     <label data-i18n="divinewill">Divine (Will)</label>
@@ -1007,7 +1003,7 @@
                     <table class="sheet-skills" cellspacing="0" cellpadding="0" border="0" data-i18n-list="knowledge-skills-list">
                         <thead>
                             <tr>
-                                <th data-i18n="knowledgeskills">Social Skills</th>
+                                <th data-i18n="socialskills">Social Skills</th>
                                 <th data-i18n="career">Career</th>
                                 <th colspan="2" data-i18n="rank">Rank</th>
                                 <th colspan="2" data-i18n="mods">Mods</th>
@@ -1307,8 +1303,8 @@
                                                         <option value="skill(@{rankBrawl}|@{brawn})" data-i18n="brawl">Brawl</option>
                                                         <option value="skill(@{rankGunnery}|@{agility})" data-i18n="gunnery">Gunnery</option>
                                                         <option value="skill(@{rankMelee}|@{brawn})" data-i18n="melee">Melee</option>
-                                                        <option value="skill(@{rankMeleeLight}|@{brawn})" data-i18n="melee">Melee - Light</option>
-                                                        <option value="skill(@{rankMeleeHeavy}|@{brawn})" data-i18n="melee">Melee - Heavy</option>
+                                                        <option value="skill(@{rankMeleeLight}|@{brawn})" data-i18n="meleelight">Melee - Light</option>
+                                                        <option value="skill(@{rankMeleeHeavy}|@{brawn})" data-i18n="meleeheavy">Melee - Heavy</option>
                                                         <option value="skill(@{rankRanged}|@{agility})" data-i18n="ranged">Ranged</option>
                                                         <option value="skill(@{rankLight}|@{agility})" data-i18n="rangedlight">Ranged - Light</option>
                                                         <option value="skill(@{rankHeavy}|@{agility})" data-i18n="rangedheavy">Ranged - Heavy</option>
@@ -1481,7 +1477,7 @@
                                                 <option value="!eed rollPlayer(character:@{name}|skill:willpower,rankVigilance) label(skill:Vigilance) @{FightingDice} @{dicePool} (gmdice)" data-i18n="vigilance">Vigilance</option>
                                             </optgroup>
                                             <optgroup label="Magic Skills">
-                                                <option value="!eed rollPlayer(character:@{name}|skill:intellect,rankArcane) label(skill:Arcane) @{FightingDice} @{dicePool} (gmdice)" data-i18n="arcane">Arcane</option>
+                                                <option value="!eed rollPlayer(character:@{name}|skill:intellect,rankArcana) label(skill:Arcana) @{FightingDice} @{dicePool} (gmdice)" data-i18n="Arcana">Arcana</option>
                                                 <option value="!eed rollPlayer(character:@{name}|skill:willpower,rankDivine) label(skill:Divine) @{FightingDice} @{dicePool} (gmdice)" data-i18n="divine">Divine</option>
                                                 <option value="!eed rollPlayer(character:@{name}|skill:cunning,rankPrimal) label(skill:Primal) @{FightingDice} @{dicePool} (gmdice)" data-i18n="primal">Primal</option>
                                             </optgroup>
@@ -1593,7 +1589,7 @@
                                     <td>
                                         <select name='attr_MagicSkill'>
                                             <optgroup label="Magic Skills">
-                                                <option value="!eed rollPlayer(character:@{name}|skill:intellect,rankArcane) label(skill:Arcane) @{FightingDice} @{dicePool} (gmdice)" data-i18n="arcane">Arcane</option>
+                                                <option value="!eed rollPlayer(character:@{name}|skill:intellect,rankArcana) label(skill:Arcana) @{FightingDice} @{dicePool} (gmdice)" data-i18n="Arcana">Arcana</option>
                                                 <option value="!eed rollPlayer(character:@{name}|skill:willpower,rankDivine) label(skill:Divine) @{FightingDice} @{dicePool} (gmdice)" data-i18n="divine">Divine</option>
                                                 <option value="!eed rollPlayer(character:@{name}|skill:cunning,rankPrimal) label(skill:Primal) @{FightingDice} @{dicePool} (gmdice)" data-i18n="primal">Primal</option>
                                             </optgroup>
@@ -2206,7 +2202,7 @@
                                         <td>
                                             <select name='attr_spaceRoleSkill'>
                                                 <optgroup label="General Skills">
-                                                    <option value="!eed rollPlayer(character:@{spaceRoleCharacterName}|skill:intellect,rankAlchemy) label(skill:Alchemy|Vehicle:@{transport-space-name}|Vehicle:@{transport-space-name}|Role:@{spaceRoleName}) combat(vehicle) @{spaceRoleDice} @{dicePool} (gmdice)" data-i18n="astrocartography">Alchemy</option>
+                                                    <option value="!eed rollPlayer(character:@{spaceRoleCharacterName}|skill:intellect,rankAlchemy) label(skill:Alchemy|Vehicle:@{transport-space-name}|Vehicle:@{transport-space-name}|Role:@{spaceRoleName}) combat(vehicle) @{spaceRoleDice} @{dicePool} (gmdice)" data-i18n="alchemy">Alchemy</option>
                                                     <option value="!eed rollPlayer(character:@{spaceRoleCharacterName}|skill:intellect,rankAstrogation) label(skill:Astrogation|Vehicle:@{transport-space-name}|Vehicle:@{transport-space-name}|Role:@{spaceRoleName}) combat(vehicle) @{spaceRoleDice} @{dicePool} (gmdice)" data-i18n="astrocartography">Astrocartography</option>
                                                     <option value="!eed rollPlayer(character:@{spaceRoleCharacterName}|skill:brawn,rankAthletics) label(skill:Athletics|Vehicle:@{transport-space-name}|Vehicle:@{transport-space-name}|Role:@{spaceRoleName}) combat(vehicle) @{spaceRoleDice} @{dicePool} (gmdice)" data-i18n="athletics">Athletics</option>
                                                     <option value="!eed rollPlayer(character:@{spaceRoleCharacterName}|skill:intellect,rankComputers) label(skill:Computers|Vehicle:@{transport-space-name}|Vehicle:@{transport-space-name}|Role:@{spaceRoleName}) combat(vehicle) @{spaceRoleDice} @{dicePool} (gmdice)" data-i18n="computers">Computers</option>
@@ -2220,7 +2216,7 @@
                                                     <option value="!eed rollPlayer(character:@{spaceRoleCharacterName}|skill:cunning,rankPerception) label(skill:Perception|Vehicle:@{transport-space-name}|Vehicle:@{transport-space-name}|Role:@{spaceRoleName}) combat(vehicle) @{spaceRoleDice} @{dicePool} (gmdice)" data-i18n="perception">Perception</option>
                                                     <option value="!eed rollPlayer(character:@{spaceRoleCharacterName}|encum|skill:agility,rankPiloting) label(skill:Piloting|Vehicle:@{transport-space-name}|Vehicle:@{transport-space-name}|Role:@{spaceRoleName}) combat(vehicle) @{spaceRoleDice} @{dicePool} (gmdice)" data-i18n="piloting">Piloting</option>
                                                     <option value="!eed rollPlayer(character:@{spaceRoleCharacterName}|skill:brawn,rankResilience) label(skill:Resilience|Vehicle:@{transport-space-name}|Vehicle:@{transport-space-name}|Role:@{spaceRoleName}) combat(vehicle) @{spaceRoleDice} @{dicePool} (gmdice)" data-i18n="resilience">Resilience</option>
-                                                    <option value="!eed rollPlayer(character:@{spaceRoleCharacterName}|encum|skill:agility,rankRiding) label(skill:Riding|Vehicle:@{transport-space-name}|Vehicle:@{transport-space-name}|Role:@{spaceRoleName}) combat(vehicle) @{spaceRoleDice} @{dicePool} (gmdice)" data-i18n="Riding">Riding</option>
+                                                    <option value="!eed rollPlayer(character:@{spaceRoleCharacterName}|encum|skill:agility,rankRiding) label(skill:Riding|Vehicle:@{transport-space-name}|Vehicle:@{transport-space-name}|Role:@{spaceRoleName}) combat(vehicle) @{spaceRoleDice} @{dicePool} (gmdice)" data-i18n="riding">Riding</option>
                                                     <option value="!eed rollPlayer(character:@{spaceRoleCharacterName}|skill:cunning,rankSkulduggery) label(skill:Skulduggery|Vehicle:@{transport-space-name}|Vehicle:@{transport-space-name}|Role:@{spaceRoleName}) combat(vehicle) @{spaceRoleDice} @{dicePool} (gmdice)" data-i18n="skulduggery">Skulduggery</option>
                                                     <option value="!eed rollPlayer(character:@{spaceRoleCharacterName}|encum|skill:agility,rankStealth) label(skill:Stealth|Vehicle:@{transport-space-name}|Vehicle:@{transport-space-name}|Role:@{spaceRoleName}) combat(vehicle) @{spaceRoleDice} @{dicePool} (gmdice)" data-i18n="stealth">Stealth</option>
                                                     <option value="!eed rollPlayer(character:@{spaceRoleCharacterName}|skill:cunning,rankStreetwise) label(skill:Streetwise|Vehicle:@{transport-space-name}|Vehicle:@{transport-space-name}|Role:@{spaceRoleName}) combat(vehicle) @{spaceRoleDice} @{dicePool} (gmdice)" data-i18n="streetwise">Streetwise</option>
@@ -2228,7 +2224,7 @@
                                                     <option value="!eed rollPlayer(character:@{spaceRoleCharacterName}|skill:willpower,rankVigilance) label(skill:Vigilance|Vehicle:@{transport-space-name}|Vehicle:@{transport-space-name}|Role:@{spaceRoleName}) combat(vehicle) @{spaceRoleDice} @{dicePool} (gmdice)" data-i18n="vigilance">Vigilance</option>
                                                 </optgroup>
                                                 <optgroup label="Magic Skills">
-                                                    <option value="!eed rollPlayer(character:@{spaceRoleCharacterName}|skill:intellect,rankArcane) label(skill:Arcane|Vehicle:@{transport-space-name}|Vehicle:@{transport-space-name}|Role:@{spaceRoleName}) combat(vehicle) @{spaceRoleDice} @{dicePool} (gmdice)" data-i18n="arcane">Arcane</option>
+                                                    <option value="!eed rollPlayer(character:@{spaceRoleCharacterName}|skill:intellect,rankArcana) label(skill:Arcana|Vehicle:@{transport-space-name}|Vehicle:@{transport-space-name}|Role:@{spaceRoleName}) combat(vehicle) @{spaceRoleDice} @{dicePool} (gmdice)" data-i18n="Arcana">Arcana</option>
                                                     <option value="!eed rollPlayer(character:@{spaceRoleCharacterName}|skill:willpower,rankDivine) label(skill:Divine|Vehicle:@{transport-space-name}|Vehicle:@{transport-space-name}|Role:@{spaceRoleName}) combat(vehicle) @{spaceRoleDice} @{dicePool} (gmdice)" data-i18n="divine">Divine</option>
                                                     <option value="!eed rollPlayer(character:@{spaceRoleCharacterName}|skill:cunning,rankPrimal) label(skill:Primal|Vehicle:@{transport-space-name}|Vehicle:@{transport-space-name}|Role:@{spaceRoleName}) combat(vehicle) @{spaceRoleDice} @{dicePool} (gmdice)" data-i18n="primal">Primal</option>
                                                 </optgroup>
@@ -2723,7 +2719,7 @@
                                         <td>
                                             <select name='attr_planetaryRoleSkill'>
                                                 <optgroup label="General Skills">
-                                                    <option value="!eed rollPlayer(character:@{planetaryRoleCharacterName}|skill:intellect,rankAlchemy) label(skill:Alchemy|Vehicle:@{transport-planetary-name}|Vehicle:@{transport-planetary-name}|Role:@{planetaryRoleName}) @{planetaryRoleDice} @{dicePool} (gmdice)" data-i18n="astrocartography">Alchemy</option>
+                                                    <option value="!eed rollPlayer(character:@{planetaryRoleCharacterName}|skill:intellect,rankAlchemy) label(skill:Alchemy|Vehicle:@{transport-planetary-name}|Vehicle:@{transport-planetary-name}|Role:@{planetaryRoleName}) @{planetaryRoleDice} @{dicePool} (gmdice)" data-i18n="alchemy">Alchemy</option>
                                                     <option value="!eed rollPlayer(character:@{planetaryRoleCharacterName}|skill:intellect,rankAstrogation) label(skill:Astrogation|Vehicle:@{transport-planetary-name}|Vehicle:@{transport-planetary-name}|Role:@{planetaryRoleName}) @{planetaryRoleDice} @{dicePool} (gmdice)" data-i18n="astrocartography">Astrocartography</option>
                                                     <option value="!eed rollPlayer(character:@{planetaryRoleCharacterName}|skill:brawn,rankAthletics) label(skill:Athletics|Vehicle:@{transport-planetary-name}|Vehicle:@{transport-planetary-name}|Role:@{planetaryRoleName}) @{planetaryRoleDice} @{dicePool} (gmdice)" data-i18n="athletics">Athletics</option>
                                                     <option value="!eed rollPlayer(character:@{planetaryRoleCharacterName}|skill:intellect,rankComputers) label(skill:Computers|Vehicle:@{transport-planetary-name}|Vehicle:@{transport-planetary-name}|Role:@{planetaryRoleName}) @{planetaryRoleDice} @{dicePool} (gmdice)" data-i18n="computers">Computers</option>
@@ -2737,7 +2733,7 @@
                                                     <option value="!eed rollPlayer(character:@{planetaryRoleCharacterName}|skill:cunning,rankPerception) label(skill:Perception|Vehicle:@{transport-planetary-name}|Vehicle:@{transport-planetary-name}|Role:@{planetaryRoleName}) @{planetaryRoleDice} @{dicePool} (gmdice)" data-i18n="perception">Perception</option>
                                                     <option value="!eed rollPlayer(character:@{planetaryRoleCharacterName}|encum|skill:agility,rankPiloting) label(skill:Piloting|Vehicle:@{transport-planetary-name}|Vehicle:@{transport-planetary-name}|Role:@{planetaryRoleName}) @{planetaryRoleDice} @{dicePool} (gmdice)" data-i18n="piloting">Piloting</option>
                                                     <option value="!eed rollPlayer(character:@{planetaryRoleCharacterName}|skill:brawn,rankResilience) label(skill:Resilience|Vehicle:@{transport-planetary-name}|Vehicle:@{transport-planetary-name}|Role:@{planetaryRoleName}) @{planetaryRoleDice} @{dicePool} (gmdice)" data-i18n="resilience">Resilience</option>
-                                                    <option value="!eed rollPlayer(character:@{planetaryRoleCharacterName}|encum|skill:agility,rankRiding) label(skill:Riding|Vehicle:@{transport-planetary-name}|Vehicle:@{transport-planetary-name}|Role:@{planetaryRoleName}) @{planetaryRoleDice} @{dicePool} (gmdice)" data-i18n="Riding">Riding</option>
+                                                    <option value="!eed rollPlayer(character:@{planetaryRoleCharacterName}|encum|skill:agility,rankRiding) label(skill:Riding|Vehicle:@{transport-planetary-name}|Vehicle:@{transport-planetary-name}|Role:@{planetaryRoleName}) @{planetaryRoleDice} @{dicePool} (gmdice)" data-i18n="riding">Riding</option>
                                                     <option value="!eed rollPlayer(character:@{planetaryRoleCharacterName}|skill:cunning,rankSkulduggery) label(skill:Skulduggery|Vehicle:@{transport-planetary-name}|Vehicle:@{transport-planetary-name}|Role:@{planetaryRoleName}) @{planetaryRoleDice} @{dicePool} (gmdice)" data-i18n="skulduggery">Skulduggery</option>
                                                     <option value="!eed rollPlayer(character:@{planetaryRoleCharacterName}|encum|skill:agility,rankStealth) label(skill:Stealth|Vehicle:@{transport-planetary-name}|Vehicle:@{transport-planetary-name}|Role:@{planetaryRoleName}) @{planetaryRoleDice} @{dicePool} (gmdice)" data-i18n="stealth">Stealth</option>
                                                     <option value="!eed rollPlayer(character:@{planetaryRoleCharacterName}|skill:cunning,rankStreetwise) label(skill:Streetwise|Vehicle:@{transport-planetary-name}|Vehicle:@{transport-planetary-name}|Role:@{planetaryRoleName}) @{planetaryRoleDice} @{dicePool} (gmdice)" data-i18n="streetwise">Streetwise</option>
@@ -2745,7 +2741,7 @@
                                                     <option value="!eed rollPlayer(character:@{planetaryRoleCharacterName}|skill:willpower,rankVigilance) label(skill:Vigilance|Vehicle:@{transport-planetary-name}|Vehicle:@{transport-planetary-name}|Role:@{planetaryRoleName}) @{planetaryRoleDice} @{dicePool} (gmdice)" data-i18n="vigilance">Vigilance</option>
                                                 </optgroup>
                                                 <optgroup label="Magic Skills">
-                                                    <option value="!eed rollPlayer(character:@{planetaryRoleCharacterName}|skill:intellect,rankArcane) label(skill:Arcane|Vehicle:@{transport-planetary-name}|Vehicle:@{transport-planetary-name}|Role:@{planetaryRoleName}) @{planetaryRoleDice} @{dicePool} (gmdice)" data-i18n="arcane">Arcane</option>
+                                                    <option value="!eed rollPlayer(character:@{planetaryRoleCharacterName}|skill:intellect,rankArcana) label(skill:Arcana|Vehicle:@{transport-planetary-name}|Vehicle:@{transport-planetary-name}|Role:@{planetaryRoleName}) @{planetaryRoleDice} @{dicePool} (gmdice)" data-i18n="Arcana">Arcana</option>
                                                     <option value="!eed rollPlayer(character:@{planetaryRoleCharacterName}|skill:willpower,rankDivine) label(skill:Divine|Vehicle:@{transport-planetary-name}|Vehicle:@{transport-planetary-name}|Role:@{planetaryRoleName}) @{planetaryRoleDice} @{dicePool} (gmdice)" data-i18n="divine">Divine</option>
                                                     <option value="!eed rollPlayer(character:@{planetaryRoleCharacterName}|skill:cunning,rankPrimal) label(skill:Primal|Vehicle:@{transport-planetary-name}|Vehicle:@{transport-planetary-name}|Role:@{planetaryRoleName}) @{planetaryRoleDice} @{dicePool} (gmdice)" data-i18n="primal">Primal</option>
                                                 </optgroup>
@@ -4350,11 +4346,11 @@
                             <td><input type="text" name="attr_companion-species" /></td>
                         </tr>
                         <tr>
-                            <td><label data-i18n="species:">Career:</label></td>
+                            <td><label data-i18n="career:">Career:</label></td>
                             <td><input type="text" name="attr_companion-career" /></td>
                         </tr>
                         <tr>
-                            <td><label data-i18n="species:">Setting:</label></td>
+                            <td><label data-i18n="setting:">Setting:</label></td>
                             <td><input type="text" name="attr_companion-setting" /></td>
                         </tr>
                         <tr>
@@ -4537,8 +4533,8 @@
                                                             <option value="skill(@{companion-rankBrawl}|@{companion-brawn})" data-i18n="brawl">Brawl</option>
                                                             <option value="skill(@{companion-rankGunnery}|@{companion-agility})" data-i18n="gunnery">Gunnery</option>
                                                             <option value="skill(@{companion-rankMelee}|@{companion-brawn})" data-i18n="melee">Melee</option>
-                                                            <option value="skill(@{companion-rankMeleeLight}|@{companion-brawn})" data-i18n="melee">Melee - Light</option>
-                                                            <option value="skill(@{companion-rankMeleeHeavy}|@{companion-brawn})" data-i18n="melee">Melee - Heavy</option>
+                                                            <option value="skill(@{companion-rankMeleeLight}|@{companion-brawn})" data-i18n="meleelight">Melee - Light</option>
+                                                            <option value="skill(@{companion-rankMeleeHeavy}|@{companion-brawn})" data-i18n="meleeheavy">Melee - Heavy</option>
                                                             <option value="skill(@{companion-rankRanged}|@{companion-agility})" data-i18n="ranged">Ranged</option>
                                                             <option value="skill(@{companion-rankLight}|@{companion-agility})" data-i18n="rangedlight">Ranged - Light</option>
                                                             <option value="skill(@{companion-rankHeavy}|@{companion-agility})" data-i18n="rangedheavy">Ranged - Heavy</option>
@@ -5095,7 +5091,7 @@
                         <table class="sheet-skills" cellspacing="0" cellpadding="0" border="0">
                             <thead>
                                 <tr>
-                                    <th data-i18n="combatskills">Magic Skills</th>
+                                    <th data-i18n="magicskills">Magic Skills</th>
                                     <th data-i18n="career">Career</th>
                                     <th colspan="2" data-i18n="rank">Rank</th>
                                     <th colspan="2" data-i18n="mods">Mods</th>
@@ -5317,7 +5313,7 @@
                         <table class="sheet-skills" cellspacing="0" cellpadding="0" border="0">
                             <thead>
                                 <tr>
-                                    <th data-i18n="combatskills">Social Skills</th>
+                                    <th data-i18n="socialskills">Social Skills</th>
                                     <th data-i18n="career">Career</th>
                                     <th colspan="2" data-i18n="rank">Rank</th>
                                     <th colspan="2" data-i18n="mods">Mods</th>
@@ -5591,8 +5587,6 @@
                                         <td rowspan="3"><button type='roll' name='roll_ForceSkill' value=@{companion-ForceSkill}></button></td>
                                     </tr>
                                     <tr>
-                                        <td><label data-i18n="forcediceavailable:">Force Dice Available:</label></td>
-                                        <td><input type="number" name="attr_companion-forceavailable" value="@{companion-forcerating}-@{companion-forcecommitted}" disabled></td>
                                         <td><label data-i18n="booknpage:">Book &amp; Page:</label></td>
                                         <td><input type="text" name="attr_companion-powerpagenum" /></td>
                                     </tr>
@@ -5601,9 +5595,9 @@
                                         <td colspan="2">
                                             <select name='attr_companion-MagicSkill'>
                                                 <optgroup label="Magic Skills" data-i18n-label="magicskills">
-                                                    <option value="!eed rollPlayer(character:@{name}|skill:companion-intellect,companion-rankArcana) label(skill:Companion Magic Power|Companion Name: @{companion-name}|Skill Name: Arcana|Power Name:@{companion-magicpowername}) @{companion-ForceSkillDice} @{dicePool} (gmdice)" data-i18n="athletics">Arcana</option>
-                                                    <option value="!eed rollPlayer(character:@{name}|skill:companion-willpower,companion-rankDivine) label(skill:Companion Magic Power|Companion Name: @{companion-name}|Skill Name: Divine|Power Name:@{companion-magicpowername}) @{companion-ForceSkillDice} @{dicePool} (gmdice)" data-i18n="charm">Divine</option>
-                                                    <option value="!eed rollPlayer(character:@{name}|skill:companion-cunning,companion-rankPrimal) label(skill:Companion Magic Power|Companion Name: @{companion-name}|Skill Name: Primal|Power Name:@{companion-magicpowername}) @{companion-ForceSkillDice} @{dicePool} (gmdice)" data-i18n="coercion">Primal</option>
+                                                    <option value="!eed rollPlayer(character:@{name}|skill:companion-intellect,companion-rankArcana) label(skill:Companion Magic Power|Companion Name: @{companion-name}|Skill Name: Arcana|Power Name:@{companion-magicpowername}) @{dicePool} (gmdice)" data-i18n="arcana">Arcana</option>
+                                                    <option value="!eed rollPlayer(character:@{name}|skill:companion-willpower,companion-rankDivine) label(skill:Companion Magic Power|Companion Name: @{companion-name}|Skill Name: Divine|Power Name:@{companion-magicpowername}) @{dicePool} (gmdice)" data-i18n="divine">Divine</option>
+                                                    <option value="!eed rollPlayer(character:@{name}|skill:companion-cunning,companion-rankPrimal) label(skill:Companion Magic Power|Companion Name: @{companion-name}|Skill Name: Primal|Power Name:@{companion-magicpowername}) @{dicePool} (gmdice)" data-i18n="primal">Primal</option>
                                                 </optgroup>
                                             </select>
                                         </td><!--Skill List-->
@@ -6259,8 +6253,8 @@
                                                             <option value="skill(@{npc-rankBrawl}|@{npc-brawn}|@{npc-minion-group-size}|@{npc-minionskillBrawl})" data-i18n="brawl">Brawl</option>
                                                             <option value="skill(@{npc-rankGunnery}|@{npc-agility}|@{npc-minion-group-size}|@{npc-minionskillGunnery})" data-i18n="gunnery">Gunnery</option>
                                                             <option value="skill(@{npc-rankMelee}|@{npc-brawn}|@{npc-minion-group-size}|@{npc-minionskillMelee})" data-i18n="melee">Melee</option>
-                                                            <option value="skill(@{npc-rankMeleeLight}|@{npc-brawn}|@{npc-minion-group-size}|@{npc-minionskillMeleeLight})" data-i18n="melee">Melee - Light</option>
-                                                            <option value="skill(@{npc-rankMeleeHeavy}|@{npc-brawn}|@{npc-minion-group-size}|@{npc-minionskillMeleeHeavy})" data-i18n="melee">Melee - Heavy</option>
+                                                            <option value="skill(@{npc-rankMeleeLight}|@{npc-brawn}|@{npc-minion-group-size}|@{npc-minionskillMeleeLight})" data-i18n="meleelight">Melee - Light</option>
+                                                            <option value="skill(@{npc-rankMeleeHeavy}|@{npc-brawn}|@{npc-minion-group-size}|@{npc-minionskillMeleeHeavy})" data-i18n="meleeheavy">Melee - Heavy</option>
                                                             <option value="skill(@{npc-rankRanged}|@{npc-agility}|@{npc-minion-group-size}|@{npc-minionskillRanged})" data-i18n="ranged">Ranged</option>
                                                             <option value="skill(@{npc-rankLight}|@{npc-agility}|@{npc-minion-group-size}|@{npc-minionskillLight})" data-i18n="rangedlight">Ranged - Light</option>
                                                             <option value="skill(@{npc-rankHeavy}|@{npc-agility}|@{npc-minion-group-size}|@{npc-minionskillHeavy})" data-i18n="rangedheavy">Ranged - Heavy</option>
@@ -6664,7 +6658,7 @@
                         <table class="sheet-skills" cellspacing="0" cellpadding="0" border="0">
                             <thead>
                                 <tr>
-                                    <th data-i18n="combatskills">Magic Skills</th>
+                                    <th data-i18n="magicskills">Magic Skills</th>
                                     <th class="sheet-npc-minion-title" title="Check to allow the skill to use the minion group size to determine proficiency and ability dice">Minion</th>
                                     <th colspan="2" data-i18n="rank">Rank</th>
                                     <th colspan="2" data-i18n="mods">Mods</th>
@@ -6673,22 +6667,22 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        <label data-i18n="arcaneint">Arcane (Int)</label>
+                                        <label data-i18n="Arcanaint">Arcana (Int)</label>
                                     </td>
-                                    <td><input name='attr_npc-minionskillArcane' type="checkbox" value="1"></td>
-                                    <td><input type="number" name="attr_npc-rankArcane" max="6" min="0" value="0" /></td>
+                                    <td><input name='attr_npc-minionskillArcana' type="checkbox" value="1"></td>
+                                    <td><input type="number" name="attr_npc-rankArcana" max="6" min="0" value="0" /></td>
                                     <td>
-                                        <input class="sheet-yd" type="hidden" name="attr_npc-yArcane" value="(((@{npc-intellect} + (@{npc-rankArcane} - (@{npc-rankArcane} * @{npc-minionskillArcane})) + ((@{npc-minion-group-size} - 1) * @{npc-minionskillArcane})) - abs(@{npc-intellect} - (@{npc-rankArcane} - (@{npc-rankArcane} * @{npc-minionskillArcane})) - ((@{npc-minion-group-size} - 1) * @{npc-minionskillArcane}))) / 2)" disabled><span></span>
-                                        <input class="sheet-gd" type="hidden" name="attr_npc-gArcane" value="((((@{npc-intellece} + (@{npc-rankArcane} - (@{npc-rankArcane} * @{npc-minionskillArcane})) + ((@{npc-minion-group-size} - 1) * @{npc-minionskillArcane})) + abs(@{npc-intellect} - (@{npc-rankArcane} - (@{npc-rankArcane} * @{npc-minionskillArcane})) - ((@{npc-minion-group-size} - 1) * @{npc-minionskillArcane}))) / 2) - @{npc-yArcane})" disabled><span></span>
+                                        <input class="sheet-yd" type="hidden" name="attr_npc-yArcana" value="(((@{npc-intellect} + (@{npc-rankArcana} - (@{npc-rankArcana} * @{npc-minionskillArcana})) + ((@{npc-minion-group-size} - 1) * @{npc-minionskillArcana})) - abs(@{npc-intellect} - (@{npc-rankArcana} - (@{npc-rankArcana} * @{npc-minionskillArcana})) - ((@{npc-minion-group-size} - 1) * @{npc-minionskillArcana}))) / 2)" disabled><span></span>
+                                        <input class="sheet-gd" type="hidden" name="attr_npc-gArcana" value="((((@{npc-intellece} + (@{npc-rankArcana} - (@{npc-rankArcana} * @{npc-minionskillArcana})) + ((@{npc-minion-group-size} - 1) * @{npc-minionskillArcana})) + abs(@{npc-intellect} - (@{npc-rankArcana} - (@{npc-rankArcana} * @{npc-minionskillArcana})) - ((@{npc-minion-group-size} - 1) * @{npc-minionskillArcana}))) / 2) - @{npc-yArcana})" disabled><span></span>
                                     </td>
                                     <td>
                                         <div class="sheet-dice-icon"></div>
                                         <div class="sheet-dice-input">
-                                            <input type="text" name="attr_npc-diceArcane" />
+                                            <input type="text" name="attr_npc-diceArcana" />
                                         </div>
                                     </td>
-                                    <td><button type='roll' name='roll_Arcane' value='!eed characterID(@{character_id}) label(skill:Arcane) @{npc-diceArcane} encum(@{encumbrancemax}|@{encumbrance}) skill(@{npc-rankArcane}|@{npc-intellect}|@{npc-minion-group-size}|@{npc-minionskillArcane}) @{dicePool} (gmdice)'></button></td>
-                                </tr><!--Arcane-->
+                                    <td><button type='roll' name='roll_Arcana' value='!eed characterID(@{character_id}) label(skill:Arcana) @{npc-diceArcana} encum(@{encumbrancemax}|@{encumbrance}) skill(@{npc-rankArcana}|@{npc-intellect}|@{npc-minion-group-size}|@{npc-minionskillArcana}) @{dicePool} (gmdice)'></button></td>
+                                </tr><!--Arcana-->
                                 <tr>
                                     <td>
                                         <label data-i18n="divinewill">Divine (Will)</label>
@@ -6940,7 +6934,7 @@
                                             <select name='attr_npc-MagicSkill'>
                                                 <option value="!eed characterID(@{character_id}) label(skill:Force Power |Power Name:@{npc-forcepowername}) @{npc-forceavailable}w @{dicePool} (gmdice)" data-i18n="noskill">No Skill</option>
                                                 <optgroup label="Magic Skills" data-i18n-label="combatskills">
-                                                    <option value="!eed characterID(@{character_id}) label(skill:Magic Power|Skill Name:Arcana|Power Name:@{npc-forcepowername}) skill(@{npc-rankArcana}|@{npc-brawn}|@{npc-minion-group-size}|@{npc-minionskillArcana}) @{dicePool} (gmdice)" data-i18n="arcane">Arcane</option>
+                                                    <option value="!eed characterID(@{character_id}) label(skill:Magic Power|Skill Name:Arcana|Power Name:@{npc-forcepowername}) skill(@{npc-rankArcana}|@{npc-brawn}|@{npc-minion-group-size}|@{npc-minionskillArcana}) @{dicePool} (gmdice)" data-i18n="Arcana">Arcana</option>
                                                     <option value="!eed characterID(@{character_id}) label(skill:Magic Power|Skill Name:Divine|Power Name:@{npc-forcepowername}) skill(@{npc-rankDivine}|@{npc-agility}|@{npc-minion-group-size}|@{npc-minionskillDivine}) @{dicePool} (gmdice)" data-i18n="divine">Divine</option>
                                                     <option value="!eed characterID(@{character_id}) label(skill:Magic Power|Skill Name:Primal|Power Name:@{npc-forcepowername}) skill(@{npc-rankPrimal}|@{npc-agility}|@{npc-minion-group-size}|@{npc-minionskillPrimal}) @{dicePool} (gmdice)" data-i18n="primal">Primal</option>
                                                 </optgroup>
@@ -7115,6 +7109,7 @@
                             <td class="sheet-light"><img src="http://i.imgur.com/nlIAfJx.png" /><input name="attr_bgm" type="number" step="1" max="9" min="0" value="0"></td>
                             <td class="sheet-light"><img src="http://i.imgur.com/g3hoJRG.png" /><input name="attr_ggm" type="number" step="1" max="9" min="0" value="0"></td>
                             <td class="sheet-light"><img src="http://i.imgur.com/4bQ0dY8.png" /><input name="attr_ygm" type="number" step="1" max="9" min="0" value="0"></td>
+                            <td></td>
                             <td class="sheet-dark"><img src="http://i.imgur.com/n9W07Lp.png" /><input name="attr_blkgm" type="number" step="1" max="9" min="-9" value="0"></td>
                             <td class="sheet-dark"><img src="http://i.imgur.com/oxbKghK.png" /><input name="attr_pgm" type="number" step="1" max="9" min="-7" value="0"></td>
                             <td class="sheet-dark"><img src="http://i.imgur.com/GInMHEN.png" /><input name="attr_rgm" type="number" step="1" max="9" min="-7" value="0"></td>
@@ -7152,14 +7147,14 @@
         </div><!-- GM Dice Pool -->
         <div class="sheet-small-6 sheet-column">
             <br>
-            <h3 class="sheet-section-header" data-i18n="destinypool">Story Point Pools</h3>
+            <h3 class="sheet-section-header" data-i18n="storypointpool">Story Point Pools</h3>
             <input name="attr_gm-Destiny-Pool" value="1" style="width: 250px;height: 30px;margin: -44px -20px 0 297px;float:left;" class="sheet-toggle sheet-destiny-section-toggle" type="checkbox" checked="checked" />
             <div class="sheet-destiny-section">
                 <table class="sheet-destiny" cellspacing="0" cellpadding="0" border="0">
                     <tbody>
                         <tr>
                             <td colspan="1">
-                                <button type='roll' class="sheet-btn-lightSide" value='!eed characterID(@{character_id}) destiny sendUpdate' data-i18n="forceplayerupgrade">Force Player Update</button><br><br>
+                                <button type='roll' class="sheet-btn-lightSide" value='!eed characterID(@{character_id}) destiny sendUpdate' data-i18n="forceplayerupdate">Force Player Update</button><br><br>
                                 <button type='roll' class="sheet-btn-lightSide" value='!eed characterID(@{character_id}) destiny clearPool' data-i18n="clearpool">Clear Pool</button>
                             </td>
                             <td>
