@@ -7,6 +7,9 @@ Information about this project can be found at https://wiki.roll20.net/Genesys
 
 Change Log
 -----
-0.01 Initial Build <br>
-0.02 Added Translation.json and fixed coding errors.<br>
-0.03 Fixed an issue that was causing an error with the dice roller.<br>
+0.0.1 Initial Build <br>
+0.0.2 Added Translation.json and fixed coding errors.<br>
+0.0.3 Fixed an issue that was causing an error with the dice roller.<br>
+0.0.4 Fixed a translation.json issue<br>
+0.0.5 Added Genesys Setting Worksheet<br>
+<br>
