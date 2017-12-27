@@ -1,6 +1,6 @@
 /*
 Version Info:
-Version 0.0.3
+Version 0.0.5
 Created by GM Knowledge Rhino
 */
 .sheet-clear {
@@ -321,7 +321,7 @@ input.sheet-opt-ship:checked ~ table tr.sheet-opt-ship,
 input.sheet-tab-v-details:checked ~ div.sheet-tab-v-details,
 input.sheet-tab-v-weapons:checked ~ div.sheet-tab-v-weapons,
 input.sheet-tab-older:checked ~ div.sheet-tab-older,
-    /* New Vehicle Tabs */
+/* New Vehicle Tabs */
 input.sheet-tab-transport-space:checked ~ table tr.sheet-tab-transport-space,
 input.sheet-tab-transport-planetary:checked ~ table tr.sheet-tab-transport-planetary,
 input.sheet-tab-transport-beast:checked ~ table tr.sheet-tab-transport-beast,
@@ -331,27 +331,28 @@ input.sheet-tab-transport-planetary-general:checked ~ table tr.sheet-tab-transpo
 input.sheet-tab-transport-planetary-critical:checked ~ table tr.sheet-tab-transport-planetary-critical,
 input.sheet-tab-transport-beast-general:checked ~ table tr.sheet-tab-transport-beast-general,
 input.sheet-tab-transport-beast-critical:checked ~ table tr.sheet-tab-transport-beast-critical,
-    /* Base of Operations Tabs */
+/* Base of Operations Tabs */
 input.sheet-opt-rebel:checked ~ table tr td.sheet-opt-rebel,
 input.sheet-opt-business:checked ~ table tr td.sheet-opt-business,
 input.sheet-opt-homestead:checked ~ table tr td.sheet-opt-homestead,
-    /* Companion Tabs */
+/* Companion Tabs */
 input.sheet-tab-companion-info:checked ~ table tr td.sheet-tab-companion-info,
 input.sheet-tab-companion-combat:checked ~ table tr td.sheet-tab-companion-combat,
 input.sheet-tab-companion-critical:checked ~ table tr td.sheet-tab-companion-critical,
 input.sheet-tab-companion-inventory:checked ~ table tr td.sheet-tab-companion-inventory,
-    /* NPC Tabs */
+/* NPC Tabs */
 input.sheet-tab-npc-info:checked ~ table tr td.sheet-tab-npc-info,
 input.sheet-tab-npc-combat:checked ~ table tr td.sheet-tab-npc-combat,
 input.sheet-tab-npc-critical:checked ~ table tr td.sheet-tab-npc-critical,
 input.sheet-tab-npc-inventory:checked ~ table tr td.sheet-tab-npc-inventory,
-    /* GM Tabs */
+/* GM Tabs */
 input.sheet-tab-gm-combat:checked ~ table tr td.input.sheet-tab-gm-combat,
 input.sheet-tab-gm-settings:checked ~ table tr td.input.sheet-tab-gm-settings,
 input.sheet-tab-gm-weapons:checked ~ table tr td.sheet-tab-gm-weapons,
 input.sheet-tab-npc:checked ~ table tr td.sheet-tab-npc,
 input.sheet-tab-group-base-details:checked ~ table tr td.sheet-tab-group-base-details,
 input.sheet-tab-group-shared:checked ~ table tr td.sheet-tab-group-shared,
+input.sheet-tab-settinginfo:checked ~ table tr td.sheet-tab-settinginfo,
 input.sheet-tab-gm-adversaries:checked ~ table tr td.sheet-tab-gm-adversaries {
     display: table-row;
 }
@@ -362,7 +363,7 @@ input.sheet-opt-ship:checked ~ table tr td.sheet-opt-ship,
 input.sheet-tab-v-details:checked ~ div.sheet-tab-v-details,
 input.sheet-tab-v-weapons:checked ~ div.sheet-tab-v-weapons,
 input.sheet-tab-older:checked ~ div.sheet-tab-older,
-    /* New Vehicle Tabs */
+/* New Vehicle Tabs */
 input.sheet-tab-transport-space:checked ~ table tr.sheet-tab-transport-space,
 input.sheet-tab-transport-planetary:checked ~ table tr.sheet-tab-transport-planetary,
 input.sheet-tab-transport-beast:checked ~ table tr.sheet-tab-transport-beast,
@@ -372,29 +373,30 @@ input.sheet-tab-transport-planetary-general:checked ~ table tr.sheet-tab-transpo
 input.sheet-tab-transport-planetary-critical:checked ~ table tr.sheet-tab-transport-planetary-critical,
 input.sheet-tab-transport-beast-general:checked ~ table tr.sheet-tab-transport-beast-general,
 input.sheet-tab-transport-beast-critical:checked ~ table tr.sheet-tab-transport-beast-critical,
-    /* Base of Operations Tabs */
+/* Base of Operations Tabs */
 input.sheet-opt-rebel:checked ~ table tr td.sheet-opt-rebel,
 input.sheet-opt-business:checked ~ table tr td.sheet-opt-business,
 input.sheet-opt-homestead:checked ~ table tr td.sheet-opt-homestead,
-    /* Companion Tabs */
+/* Companion Tabs */
 input.sheet-tab-companion-info:checked ~ table tr td.sheet-tab-companion-info,
 input.sheet-tab-companion-stp:checked ~ table tr td.sheet-tab-companion-stp,
 input.sheet-tab-companion-combat:checked ~ table tr td.sheet-tab-companion-combat,
 input.sheet-tab-companion-critical:checked ~ table tr td.sheet-tab-companion-critical,
 input.sheet-tab-companion-inventory:checked ~ table tr td.sheet-tab-companion-inventory,
-    /* NPC Tabs */
+/* NPC Tabs */
 input.sheet-tab-npc-info:checked ~ table tr td.sheet-tab-npc-info,
 input.sheet-tab-npc-stp:checked ~ table tr td.sheet-tab-npc-stp,
 input.sheet-tab-npc-combat:checked ~ table tr td.sheet-tab-npc-combat,
 input.sheet-tab-npc-critical:checked ~ table tr td.sheet-tab-npc-critical,
 input.sheet-tab-npc-inventory:checked ~ table tr td.sheet-tab-npc-inventory,
-    /* GM Tabs */
+/* GM Tabs */
 input.sheet-tab-gm-combat:checked ~ table tr td.input.sheet-tab-gm-combat,
 input.sheet-tab-gm-settings:checked ~ table tr td.input.sheet-tab-gm-settings,
 input.sheet-tab-gm-weapons:checked ~ table tr td.sheet-tab-gm-weapons,
 input.sheet-tab-npc:checked ~ table tr td.sheet-tab-npc,
 input.sheet-tab-group-base-details:checked ~ table tr td.sheet-tab-group-base-details,
 input.sheet-tab-group-shared:checked ~ table tr td.sheet-tab-group-shared,
+input.sheet-tab-settinginfo:checked ~ table tr td.sheet-tab-settinginfo,
 input.sheet-tab-gm-adversaries:checked ~ table tr td.sheet-tab-gm-adversaries {
     display: table-cell;
 }
@@ -489,14 +491,14 @@ input.sheet-tab-base-sheet:checked ~ div.sheet-tab-base-sheet,
 input.sheet-tab-companion-sheet:checked ~ div.sheet-tab-companion-sheet,
 input.sheet-tab-npc-sheet:checked ~ div.sheet-tab-npc-sheet, /* NPC Short Sheet*/
 input.sheet-tab-gm-dice:checked ~ div.sheet-tab-gm-dice,
-    /* Character Sheet Tab SubTabs */
+/* Character Sheet Tab SubTabs */
 input.sheet-tab-character:checked ~ div.sheet-tab-character,
 input.sheet-tab-skills:checked ~ div.sheet-tab-skills,
 input.sheet-tab-talents:checked ~ div.sheet-tab-talents,
 input.sheet-tab-weapons:checked ~ div.sheet-tab-weapons,
 input.sheet-tab-notes:checked ~ div.sheet-tab-notes,
 input.sheet-tab-critical:checked ~ div.sheet-tab-critical,
-    /* Vehicle Sheet Tab SubTabs */
+/* Vehicle Sheet Tab SubTabs */
 input.sheet-tab-v-details:checked ~ div.sheet-tab-v-details,
 input.sheet-tab-v-weapons:checked ~ div.sheet-tab-v-weapons,
 input.sheet-tab-older:checked ~ div.sheet-tab-older,
@@ -509,33 +511,33 @@ input.sheet-tab-transport-planetary-general:checked ~ div.sheet-tab-transport-pl
 input.sheet-tab-transport-planetary-critical:checked ~ div.sheet-tab-transport-planetary-critical,
 input.sheet-tab-transport-beast-general:checked ~ div.sheet-tab-transport-beast-general,
 input.sheet-tab-transport-beast-critical:checked ~ div.sheet-tab-transport-beast-critical,
-    /* Group Sheet Tab*/
+/* Group Sheet Tab*/
 input.sheet-tab-base-details:checked ~ div.sheet-tab-base-details,
 input.sheet-tab-base-shared:checked ~ div.sheet-tab-base-shared,
-    /* Group Sheet Tab SubTabs */
+/* Group Sheet Tab SubTabs */
 input.sheet-tab-groupshared:checked ~ div.sheet-tab-groupshared,
-    /* Group Sheet Tab Radio Buttons */
+/* Group Sheet Tab Radio Buttons */
 input.sheet-opt-rebel:checked ~ div.sheet-opt-rebel,
 input.sheet-opt-business:checked ~ div.sheet-opt-business,
 input.sheet-opt-homestead:checked ~ div.sheet-opt-homestead,
-    /* Companion Sub Tabs */
+/* Companion Sub Tabs */
 input.sheet-tab-companion-info:checked ~ div.sheet-tab-companion-info,
 input.sheet-tab-companion-combat:checked ~ div.sheet-tab-companion-combat,
 input.sheet-tab-companion-critical:checked ~ div.sheet-tab-companion-critical,
 input.sheet-tab-companion-inventory:checked ~ div.sheet-tab-companion-inventory,
-    /* Companion Sub Tabs */
+/* Companion Sub Tabs */
 input.sheet-tab-npc-info:checked ~ div.sheet-tab-npc-info,
 input.sheet-tab-npc-combat:checked ~ div.sheet-tab-npc-combat,
 input.sheet-tab-npc-critical:checked ~ div.sheet-tab-npc-critical,
 input.sheet-tab-npc-inventory:checked ~ div.sheet-tab-npc-inventory,
-    /* gmdice Sheet Tab SubTabs */
+/* gmdice Sheet Tab SubTabs */
 input.sheet-tab-gm-combat:checked ~ div.sheet-tab-gm-combat,
 input.sheet-tab-gm-settings:checked ~ div.sheet-tab-gm-settings,
 input.sheet-tab-gm-weapons:checked ~ div.sheet-tab-gm-weapons, /* Currently used for Group Mechanics sheet */
 input.sheet-tab-group-base-details:checked ~ div.sheet-tab-group-base-details, /* Group Base of Operations Copy*/
 input.sheet-tab-group-shared:checked ~ div.sheet-tab-group-shared, /* Group Shared Resources Copy*/
-input.sheet-tab-gm-adversaries:checked ~ div.sheet-tab-gm-adversaries /* Currently used for Campaign Details sheet */
- {
+input.sheet-tab-settinginfo:checked ~ div.sheet-tab-settinginfo, /* Game Setting Worksheet */
+input.sheet-tab-gm-adversaries:checked ~ div.sheet-tab-gm-adversaries /* Currently used for Campaign Details sheet */ {
     display: block;
 }
 
@@ -1951,13 +1953,14 @@ input[type="checkbox"].sheet-toggle:checked + span::before {
 /* Header section */
 input.sheet-header-section-toggle:checked ~ div.sheet-header-section,
 input.sheet-top-section-toggle:checked ~ div.sheet-top-section,
-
 input.sheet-stats-section-toggle:checked ~ div.sheet-stats-section,
 input.sheet-destiny-section-toggle:checked ~ div.sheet-destiny-section,
 input.sheet-dice-section-toggle:checked ~ div.sheet-dice-section,
 input.sheet-motivations-section-toggle:checked ~ div.sheet-motivations-section,
 input.sheet-obligation-section-toggle:checked ~ div.sheet-obligation-section,
 input.sheet-assignment-section-toggle:checked ~ div.sheet-assignment-section,
+input.sheet-setting-section-toggle:checked ~ div.sheet-setting-section,
+input.sheet-settingworksheet-section:checked ~ div.sheet-settingworksheet-section,
 input.sheet-duties-section-toggle:checked ~ div.sheet-duties-section,
 input.sheet-morality-section-toggle:checked ~ div.sheet-morality-section,
 input.sheet-details-section-toggle:checked ~ div.sheet-details-section,
@@ -1967,15 +1970,12 @@ input.sheet-contacts-section-toggle:checked ~ div.sheet-contacts-section,
 input.sheet-tasks-section-toggle:checked ~ div.sheet-tasks-section,
 input.sheet-resources-section-toggle:checked ~ div.sheet-resources-section,
 input.sheet-possessions-section-toggle:checked ~ div.sheet-possessions-section,
-
 input.sheet-roles-section-toggle:checked ~ div.sheet-roles-section,
 input.sheet-attachments-section-toggle:checked ~ div.sheet-attachments-section,
 input.sheet-cargo-section-toggle:checked ~ div.sheet-cargo-section,
 input.sheet-passengers-section-toggle:checked ~ div.sheet-passengers-section,
-
 input.sheet-main-section-toggle:checked ~ div.sheet-main-section,
 input.sheet-mechanics-section-toggle:checked ~ div.sheet-mechanics-section,
-
 input.sheet-quickinfo-section-toggle:checked ~ div.sheet-quickinfo-section,
 input.sheet-weapon-section-toggle:checked ~ div.sheet-weapon-section,
 input.sheet-characteristic-section-toggle:checked ~ div.sheet-characteristic-section,
@@ -1984,33 +1984,25 @@ input.sheet-talents-section-toggle:checked ~ div.sheet-talents-section,
 input.sheet-force-section-toggle:checked ~ div.sheet-force-section,
 input.sheet-signature-section-toggle:checked ~ div.sheet-signature-section,
 input.sheet-combatskills-section-toggle:checked ~ div.sheet-combatskills-section,
-
 input.sheet-armor-section-toggle:checked ~ div.sheet-armor-section,
 input.sheet-cybernetics-section-toggle:checked ~ div.sheet-cybernetics-section,
 input.sheet-tools-section-toggle:checked ~ div.sheet-tools-section,
 input.sheet-other-gear-section-toggle:checked ~ div.sheet-other-gear-section,
 input.sheet-initiative-section-toggle:checked ~ div.sheet-initiative-section,
-
 input.sheet-stats-toggle-small:checked ~ div.sheet-stats-toggle-small,
-
 input.sheet-equipment-section-toggle:checked ~ div.sheet-equipment-section,
-
 input.sheet-character-toggle-small:checked ~ div.sheet-character-toggle-small,
 input.sheet-game-mechanics-toggle-small:checked ~ div.sheet-game-mechanics-toggle-small,
-
 input.sheet-career-toggle-small:checked ~ div.sheet-career-toggle-small,
 input.sheet-description-toggle-small:checked ~ div.sheet-description-toggle-small,
 input.sheet-motivation-toggle-small:checked ~ div.sheet-motivation-toggle-small,
-
 input.sheet-obligation-toggle-small:checked ~ div.sheet-obligation-toggle-small,
 input.sheet-duty-toggle-small:checked ~ div.sheet-duty-toggle-small,
 input.sheet-morality-toggle-small:checked ~ div.sheet-morality-toggle-small,
-
 input.sheet-armor-toggle-small:checked ~ div.sheet-armor-toggle-small,
 input.sheet-cybernetics-toggle-small:checked ~ div.sheet-cybernetics-toggle-small,
 input.sheet-tools-toggle-small:checked ~ div.sheet-tools-toggle-small,
 input.sheet-other-gear-toggle-small:checked ~ div.sheet-other-gear-toggle-small,
-
 input.sheet-initiative-toggle-small:checked ~ div.sheet-initiative-toggle-small,
 input.sheet-info-toggle-small:checked ~ div.sheet-info-toggle-small,
 input.sheet-weapons-toggle-small:checked ~ div.sheet-weapons-toggle-small,
@@ -2019,10 +2011,8 @@ input.sheet-skills-toggle-small:checked ~ div.sheet-skills-toggle-small,
 input.sheet-talents-toggle-small:checked ~ div.sheet-talents-toggle-small,
 input.sheet-equipment-toggle-small:checked ~ div.sheet-equipment-toggle-small,
 input.sheet-force-toggle-small:checked ~ div.sheet-force-toggle-small,
-
 input.sheet-toggle.sheet-initiative-toggle-small:checked ~ div.sheet-initiative-toggle-small,
-
-    /* Repeating Section Toggles */
+/* Repeating Section Toggles */
 input.sheet-assignment-toggle:checked ~ div.sheet-assignment,
 input.sheet-mission-toggle:checked ~ div.sheet-mission,
 input.sheet-geninfo-toggle:checked ~ div.sheet-geninfo,
@@ -2031,8 +2021,7 @@ input.sheet-rewards-toggle:checked ~ div.sheet-rewards,
 input.sheet-details-toggle:checked ~ div.sheet-details,
 input.sheet-list-toggle:checked ~ div.sheet-list,
 input.sheet-weapon-toggle:checked ~ div.sheet-weapon,
-
-    /* footer */
+/* footer */
 input.sheet-footer-toggle:checked ~ div.sheet-footer {
     display: block;
 }
