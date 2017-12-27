@@ -1,6 +1,6 @@
 /*
- Current Version: 0.0.4
- Last updated: 12.26.2017
+ Current Version: 0.0.5
+ Last updated: 12.27.2017
  Character Sheet and Script created by: GM Knowledge Rhino
 
  Credits:
