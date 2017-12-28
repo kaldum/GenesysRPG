@@ -1,6 +1,6 @@
 /*
- Current Version: 0.0.5
- Last updated: 12.27.2017
+ Current Version: 0.0.7
+ Last updated: 12.28.2017
  Character Sheet and Script created by: GM Knowledge Rhino
 
  Credits:
@@ -2584,123 +2584,81 @@ eote.process.crit = function (cmd, diceObj) {
     ];
     var critTableMachine = [
         {
-            percent: '1 to 9',
+            percent: '1 to 18',
             severity: 1,
-            name: 'Mechanical Stress',
-            Result: 'Ship or vehicle suffers 1 system strain.'
+            name: 'Rattled',
+            Result: 'Ship or vehicle suffers 3 system strain, and its pilot and each occupant suffer 3 strain'
         },
         {
-            percent: '10 to 18',
+            percent: '19 to 36',
             severity: 1,
-            name: 'Jostled',
-            Result: 'All crew members suffer 1 strain.'
+            name: 'Shrapnel Spray',
+            Result: 'Chunks of metal or wood are huled at teh occupants at deadly velocity. The pilot and occupants must each make a Hard Resilience or Vigilance check or suffer 1 wound, plue 1 additional wound per threat on the failure: you may spend 3 Threat or 1 Despair from this check to inflict a Critical Injury on the character.'
         },
         {
-            percent: '19 to 27',
+            percent: '37 to 54',
             severity: 1,
-            name: 'Losing Power to Shields',
-            Result: 'Decrease defense in affected defense zone by 1 until repaired. If ship or vehicle has no defense, suffer 1 system strain.'
-        },
-        {
-            percent: '28 to 36',
-            severity: 1,
-            name: 'Knocked Off Course',
-            Result: 'On next turn, pilot cannot execute any maneuvers. Instead, must make a Piloting check to regain bearings and resume course. Difficulty depends on current speed.'
-        },
-        {
-            percent: '37 to 45',
-            severity: 1,
-            name: 'Tailspin',
-            Result: 'All firing from ship or vehicle suffers 2 setback dice until end of pilot\'s next turn.'
-        },
-        {
-            percent: '46 to 54',
-            severity: 1,
-            name: 'Component Hit',
-            Result: 'One component of the attacker\'s choice is knocked offline, and is rendered inoperable until the end of the following round. See page 245 CRB for Small/Large Vehicle and Ship Component tables. '
+            name: 'Hull Damaged',
+            Result: 'This vehicle\'s hull is compromised (Its armor becomes 0).'
         },
         // --------------- severity : 2
         {
             percent: '55 to 63',
             severity: 2,
-            name: 'Shields Failing',
-            Result: 'Decrease defense in all defense zones by 1 until repaired. If ship or vehicle has no defense, suffer 2 system strain.'
+            name: 'Navigation Damaged',
+            Result: 'The vehicle\'s navigation is compromised (its handling becomes –3 (unless it is already lower)).'
         },
         {
             percent: '64 to 72',
             severity: 2,
-            name: 'Hyperdrive or Navicomputer Failure',
-            Result: 'Cannot make any jump to hyperspace until repaired. If ship or vehicle has no hyperdrive, navigation systems fail leaving it unable to tell where it is or is going.'
+            name: 'Propulsion Damaged',
+            Result: 'The vehicle\'s propulsion is compromised (its pilot cannot perform the accelerate maneuver, and its current speed drops by one each round, to a minimum of 0. )'
         },
         {
             percent: '73 to 81',
             severity: 2,
-            name: 'Power Fluctuations',
-            Result: 'Pilot cannot voluntarily inflict system strain on the ship until repaired.'
+            name: 'Defenses Damaged',
+            Result: 'The vehicle\'s defense is compromised (reduce its defense to 0).'
         },
         // --------------- severity : 3
         {
-            percent: '82 to 90',
+            percent: '82 to 108',
             severity: 3,
-            name: 'Shields Down',
-            Result: 'Decrease defense in affected defense zone to 0 and all other defense zones by 1 point until repaired. If ship or vehicle has no defense, suffer 4 system strain.'
+            name: 'Weapons Damaged',
+            Result: 'One of the vehicle\'s weapons of the attacker\'s choice is compromised (it cannot be used).'
         },
         {
-            percent: '91 to 99',
+            percent: '109 to 126',
             severity: 3,
-            name: 'Engine Damaged',
-            Result: 'Ship or vehicle\'s maximum speed reduced by 1, to a minimum of 1, until repaired.'
-        },
-        {
-            percent: '100 to 108',
-            severity: 3,
-            name: 'Shield Overload',
-            Result: 'Decrease defense in all defense zones to 0 until repaired. In addition, suffer 2 system strain. Cannot be repaired until end of encounter. If ship or vehicle has no defense, reduce armor by 1 until repaired.'
-        },
-        {
-            percent: '109 to 117',
-            severity: 3,
-            name: 'Engines Down',
-            Result: 'Ship or vehicle\'s maximum speed reduced to 0. In addition, ship or vehicle cannot execute maneuvers until repaired. Ship continues on course at current speed and cannot be stopped or course changed until repaired.'
-        },
-        {
-            percent: '118 to 126',
-            severity: 3,
-            name: 'Major System Failure',
-            Result: 'One component of the attacker\'s choice is heavily damages, and is inoperable until the critical hit is repaired. See page 245 CRB for Small/Large Vehicle and Ship Component tables. '
+            name: 'Brakes Damaged',
+            Result: 'The vehicle\'s brakes are compromised (its pilot cannot perform the decelerate maneuver. The vehicle can still coast to a stop over a long distance, or stop by colliding with something).'
         },
         // --------------- severity : 4
         {
-            percent: '127 to 133',
+            percent: '127 to 138',
             severity: 4,
-            name: 'Major Hull Breach',
-            Result: 'Ships and vehicles of silhouette 4 and smaller depressurize in a number of rounds equal to silhouette. Ships of silhouette 5 and larger don\'t completely depressurize, but parts do (specifics at GM discretion). Ships and vehicles operating in atmosphere instead suffer a Destabilized Critical.'
-        },
-        {
-            percent: '134 to 138',
-            severity: 4,
-            name: 'Destabilised',
-            Result: 'Reduce ship or vehicle\'s hull integrity threshold and system strain threshold to half original values until repaired.'
+            name: 'All Systems Down',
+            Result: 'All of the vehicle\'s components are compromised (see Rulebook page 221).'
         },
         {
             percent: '139 to 144',
             severity: 4,
             name: 'Fire!',
-            Result: 'Fire rages through ship or vehicle and it immediately takes 2 system strain. Fire can be extinguished with appropriate skill, Vigilance or Cool checks at GM\'s discretion. Takes one round per two silhouette to put out.'
+            Result: 'The vehicle catches on fire. While the vehicle is on fire, each occupant suffers damage as disscussed on page 111 of the Rulebook. A fire can be put out with a Hard Cool or Athletics check (or multiple checks for big vehicles).'
         },
         {
             percent: '145 to 153',
             severity: 4,
             name: 'Breaking Up',
-            Result: 'At the end of next round, ship is completely destroyed. Anyone aboard has one round to reach escape pod or bail out before they are lost.'
+            Result: 'The vehicle begins to come apart at the seams, disintegrating around the occupants. At the end of the following round, it is completely destroyed, and teh surrounding environment is littered with debris. Anyone aboard has one round to dive for the nearest door before they are lost.'
         },
         {
             percent: '154+',
             severity: 4,
             name: 'Vaporized',
-            Result: 'The ship or Vehicle is completely destroyed.'
+            Result: 'The ship or Vehicle is completely destroyed, consumed in a large and dramatic fireball. Nothing survives.'
         }
-    ];
+    ];;
     var critRoll = function (addCritNum, type) {
         var openSlot = false;
         var diceRoll = '';
