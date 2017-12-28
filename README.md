@@ -9,7 +9,8 @@ Change Log
 -----
 0.0.1 Initial Build <br>
 0.0.2 Added Translation.json and fixed coding errors.<br>
-0.0.3 Fixed an issue that was causing an error with the dice roller.<br>
+0.0.3 [Dice Roller update only] Fixed an issue that was causing an error with the dice roller.<br>
 0.0.4 Fixed a translation.json issue<br>
 0.0.5 Added Genesys Setting Worksheet<br>
+0.0.6 [HTML update only] Fixed an issue with motivations<br>
 <br>
