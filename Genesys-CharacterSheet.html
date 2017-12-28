@@ -9,7 +9,7 @@
         <table>
             <tr>
                 <td><label>Version</label></td>
-                <td>0.0.5</td>
+                <td>0.0.6</td>
                 <td style="width: 28%;"><label data-i18n="moreinfo">For more information on this version visit:</label></td>
                 <td><input disabled value="https://https://wiki.roll20.net/Genesys" type="text" /></td>
             </tr>
@@ -137,8 +137,8 @@
                             </td>
                             <td rowspan="2">
                                 <label class="sheet-label-title" data-i18n="defense">Defense</label>
-                                <input name="attr_rangeddefense" type="number" max="10" min="0" value="0" />
-                                <input name="attr_meleedefense" type="number" max="10" min="0" value="0" /><br />
+                                <input name="attr_rangeddefense" type="number" max="4" min="0" value="0" />
+                                <input name="attr_meleedefense" type="number" max="4" min="0" value="0" /><br />
                                 <label class="sheet-label-range" data-i18n="range">Range</label>
                                 <label class="sheet-label-melee" data-i18n="meleeshort">Melee</label>
                             </td>
@@ -159,7 +159,7 @@
                         </tr>
                     </tbody>
                 </table>
-            </div><!-- Top Stats -->
+            </div>
         </div>
     </div><!--Stats-->
     <div class="sheet-clear"></div>
@@ -283,7 +283,7 @@
                                 <tbody>
                                     <tr>
                                         <td><label data-i18n="desire:">Desire:</label></td>
-                                        <td><input type="text" name='attr_attr_motivation-cat' /></td>
+                                        <td><input type="text" name='attr_motivation-cat' /></td>
                                         <td><label data-i18n="type:">Type:</label></td>
                                         <td><input type="text" name="attr_motivation-type" /></td>
                                         <td><label data-i18n="description:">Description:</label></td>
@@ -291,7 +291,7 @@
                                     </tr>
                                     <tr>
                                         <td><label data-i18n="fear:">Fear:</label></td>
-                                        <td><input type="text" name='attr_attr_motivation-cat2' /></td>
+                                        <td><input type="text" name='attr_motivation-cat2' /></td>
                                         <td><label data-i18n="type:">Type:</label></td>
                                         <td><input type="text" name="attr_motivation-type2" /></td>
                                         <td><label data-i18n="description:">Description:</label></td>
@@ -299,19 +299,19 @@
                                     </tr>
                                     <tr>
                                         <td><label data-i18n="strength:">Strength:</label></td>
-                                        <td><input type="text" name='attr_attr_motivation-cat2' /></td>
+                                        <td><input type="text" name='attr_motivation-cat3' /></td>
                                         <td><label data-i18n="type:">Type:</label></td>
-                                        <td><input type="text" name="attr_motivation-type2" /></td>
+                                        <td><input type="text" name="attr_motivation-type3" /></td>
                                         <td><label data-i18n="description:">Description:</label></td>
-                                        <td><textarea rows="2" name="attr_motivation-desc2"></textarea></td>
+                                        <td><textarea rows="2" name="attr_motivation-desc3"></textarea></td>
                                     </tr>
                                     <tr>
                                         <td><label data-i18n="flaw:">Flaw:</label></td>
-                                        <td><input type="text" name='attr_attr_motivation-cat2' /></td>
+                                        <td><input type="text" name='attr_motivation-cat4' /></td>
                                         <td><label data-i18n="type:">Type:</label></td>
-                                        <td><input type="text" name="attr_motivation-type2" /></td>
+                                        <td><input type="text" name="attr_motivation-type4" /></td>
                                         <td><label data-i18n="description:">Description:</label></td>
-                                        <td><textarea rows="2" name="attr_motivation-desc2"></textarea></td>
+                                        <td><textarea rows="2" name="attr_motivation-desc4"></textarea></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -3110,8 +3110,8 @@
                             </td>
                             <td rowspan="2">
                                 <label class="sheet-label-title" data-i18n="defense">Defense</label>
-                                <input name="attr_transport-beast-rangeddefense" type="number" max="99" min="0" value="0" />
-                                <input name="attr_transport-beast-meleedefense" type="number" max="99" min="0" value="0" /><br />
+                                <input name="attr_transport-beast-rangeddefense" type="number" max="4" min="0" value="0" />
+                                <input name="attr_transport-beast-meleedefense" type="number" max="4" min="0" value="0" /><br />
                                 <label class="sheet-label-range" data-i18n="range">Range</label>
                                 <label class="sheet-label-melee" data-i18n="meleeshort">Melee</label>
                             </td>
@@ -4293,8 +4293,8 @@
                             </td>
                             <td rowspan="2">
                                 <label class="sheet-label-title" data-i18n="defense">Defense</label>
-                                <input name="attr_companion-rangeddefense" type="number" max="99" min="0" value="0" />
-                                <input name="attr_companion-meleedefense" type="number" max="99" min="0" value="0" /><br />
+                                <input name="attr_companion-rangeddefense" type="number" max="4" min="0" value="0" />
+                                <input name="attr_companion-meleedefense" type="number" max="4" min="0" value="0" /><br />
                                 <label class="sheet-label-range" data-i18n="range">Range</label>
                                 <label class="sheet-label-melee" data-i18n="meleeshort">Melee</label>
                             </td>
@@ -6068,8 +6068,8 @@
                             </td>
                             <td rowspan="2">
                                 <label class="sheet-label-title" data-i18n="defense">Defense</label>
-                                <input name="attr_npc-rangeddefense" type="number" max="99" min="0" value="0" />
-                                <input name="attr_npc-meleedefense" type="number" max="99" min="0" value="0" /><br />
+                                <input name="attr_npc-rangeddefense" type="number" max="4" min="0" value="0" />
+                                <input name="attr_npc-meleedefense" type="number" max="4" min="0" value="0" /><br />
                                 <label class="sheet-label-range" data-i18n="range">Range</label>
                                 <label class="sheet-label-melee" data-i18n="meleeshort">Melee</label>
                             </td>
