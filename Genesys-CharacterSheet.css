@@ -1,6 +1,6 @@
 /*
 Version Info:
-Version 0.0.5
+Version 0.0.8
 Created by GM Knowledge Rhino
 */
 .sheet-clear {
@@ -460,11 +460,6 @@ span.sheet-tab-new {
 
 input.sheet-tab-new:checked + span {
     background: #e01009 none repeat scroll 0 0;
-    /*background: #b5aa8d none repeat scroll 0 0;*/
-    /*background-image: -webkit-linear-gradient(top, #b5aa8d, #e3d8ba);*/
-    /*background-image: -moz-linear-gradient(top, #b5aa8d, #e3d8ba);*/
-    /*background-image: -o-linear-gradient(top, #b5aa8d, #e3d8ba);*/
-    /*background-image: linear-gradient(to bottom, #b5aa8d, #e3d8ba);*/
     border-radius: 4px;
     font-weight: bold;
     color: white;
@@ -621,8 +616,6 @@ input.sheet-tab-gm-adversaries:checked ~ div.sheet-tab-gm-adversaries /* Current
 
 .sheet-rolltemplate-base th, .sheet-rolltemplate-suggestion th {
     border-radius: 3px;
-    /* background: url(http://i.imgur.com/H8YkiDQ.jpg); */
-    /* Starfield */
     background-image: -webkit-linear-gradient(top, #485a6d, #2c3947);
     background-image: -moz-linear-gradient(top, #485a6d, #2c3947);
     background-image: -o-linear-gradient(top, #485a6d, #2c3947);
@@ -641,8 +634,6 @@ input.sheet-tab-gm-adversaries:checked ~ div.sheet-tab-gm-adversaries /* Current
 }
 
 .sheet-rolltemplate-base .sheet-tcat-header, .sheet-rolltemplate-suggestion .sheet-tcat-header {
-    /* background: url(http://i.imgur.com/H8YkiDQ.jpg); */
-    /* Starfield */
     background-image: -webkit-linear-gradient(top, #485a6d, #2c3947);
     background-image: -moz-linear-gradient(top, #485a6d, #2c3947);
     background-image: -o-linear-gradient(top, #485a6d, #2c3947);
@@ -812,11 +803,7 @@ input.sheet-gm:checked ~ div.sheet-tab-gm-dice {
 }
 
 .charsheet h3 {
-    /* background-image: url('http://i.imgur.com/dulnTTi.png'), url('http://i.imgur.com/2bOTD87.png'); */
-    /* Stretched hexagon, Grey Title lines*/
-    /* background-image: url('http://i.imgur.com/dulnTTi.png'), url('http://i.imgur.com/oWaNr2C.png'); */
-    /* Stretched hexagon, Grey Title lines*/
-    background-image: url('http://i.imgur.com/PAAMegP.png'), url('http://i.imgur.com/oWaNr2C.png'); /* Stretched hexagon, Grey Title lines*/
+    background-image: url('https://i.imgur.com/dXt1guI.png'), url('https://i.imgur.com/hOhz9JR.png'); /* Stretched hexagon, Grey Title lines*/
     background-position: center top, center 5px;
     background-repeat: no-repeat, repeat-x;
     line-height: 40px;
@@ -931,7 +918,6 @@ input.sheet-gm:checked ~ div.sheet-tab-gm-dice {
 /* ------------------------------------------------- Soak, Wounds... */
 
 .sheet-swsd {
-    /* background: url('http://i.imgur.com/YBGDdGr.png') center -2px no-repeat; */
     /* Character Sheet Stat connecting sword title - Border */
     background: url('http://i.imgur.com/M8dBhzt.png') center -2px no-repeat; /* Character Sheet Stat connecting sword title - Border */
 }
@@ -959,9 +945,8 @@ input.sheet-gm:checked ~ div.sheet-tab-gm-dice {
 .sheet-swsd td:nth-child(3),
 .sheet-swsd td:nth-child(4),
 .sheet-swsd td:nth-child(5) {
-    /* background-image: url('http://i.imgur.com/FxUooOF.png');*/
     /* Threshold / Current - Border */
-    background-image: url('http://i.imgur.com/cODj4n5.png'); /* Threshold / Current - Border */
+    background-image: url('https://i.imgur.com/knyp5jb.png'); /* Threshold / Current - Border */
     background-position: center top;
     background-repeat: no-repeat;
     width: 153px;
@@ -977,17 +962,13 @@ input.sheet-gm:checked ~ div.sheet-tab-gm-dice {
 
 .sheet-swsd tr:nth-child(2) td:nth-child(1),
 .sheet-beast tr:first-child td:nth-child(5) {
-    /*background-image: url('http://i.imgur.com/EaK5056.png');   *//*Single Digit - Border*/
-    background-image: url('http://i.imgur.com/cyPJPLg.png'); /*Single Digit - Border*/
+    background-image: url('https://i.imgur.com/wVftGop.png'); /*Single Digit - Border*/
     background-position: center top;
     background-repeat: no-repeat;
     width: 99px;
     height: 66px;
     vertical-align: top;
 }
-
-/* background-image: url('http://i.imgur.com/H92wsCd.png'); Beast-Sil */
-/* Single Digit - Border */
 
 .sheet-beast tr:first-child td:nth-child(5) {
     vertical-align: middle;
@@ -1075,8 +1056,7 @@ label.sheet-label-current {
 .sheet-destiny td:nth-child(2),
 .sheet-destiny td:nth-child(4) {
     text-align: center;
-    /*background-image: url('http://i.imgur.com/EaK5056.png');   *//*Single Digit - Border*/
-    background-image: url('http://i.imgur.com/cyPJPLg.png'); /*Single Digit - Border*/
+    background-image: url('https://i.imgur.com/wVftGop.png'); /*Single Digit - Border*/
     background-position: center top;
     background-repeat: no-repeat;
     width: 99px;
@@ -1121,8 +1101,7 @@ label.sheet-label-current {
 .sheet-characteristics td:nth-child(11),
 .sheet-characteristics td:nth-child(13) {
     text-align: center;
-    /*background-image: url('http://i.imgur.com/EaK5056.png'); *//* Single Digit - Border */
-    background-image: url('http://i.imgur.com/cyPJPLg.png'); /* Single Digit - Border */
+    background-image: url('https://i.imgur.com/wVftGop.png'); /* Single Digit - Border */
     background-position: center top;
     background-repeat: no-repeat;
     width: 99px;
@@ -1568,8 +1547,7 @@ th .sheet-help-content {
 .sheet-weapons td:nth-child(6),
 .sheet-weapons td:nth-child(8) {
     text-align: center;
-    /*background-image: url('http://i.imgur.com/EaK5056.png'); *//* Single Digit - Border */
-    background-image: url('http://i.imgur.com/cyPJPLg.png'); /* Single Digit - Border */
+    background-image: url('https://i.imgur.com/wVftGop.png'); /* Single Digit - Border */
     background-position: center top;
     background-repeat: no-repeat;
     width: 99px;
@@ -1578,9 +1556,7 @@ th .sheet-help-content {
 }
 
 .sheet-weapons {
-    /* background: url('http://i.imgur.com/2bOTD87.png') center 45px repeat-x; */
-    /* Title Double Line */
-    background: url('http://i.imgur.com/oWaNr2C.png') center 45px repeat-x; /* Title Double Line */
+    background: url('https://i.imgur.com/hOhz9JR.png') center 45px repeat-x; /* Title Double Line */
 }
 
 .sheet-weapons tr td {
@@ -1651,8 +1627,6 @@ input.sheet-view-attachments:checked ~ .sheet-attachments {
 /* ---------------------------------------------------------- Ship */
 
 .sheet-ship {
-    /* background:url('http://i.imgur.com/6yMYyrt.png') center center no-repeat; */
-    /* Vehicle Sheet Stat connecting sword title - Border */
     background: url('http://i.imgur.com/R7CME69.png') center center no-repeat; /* Vehicle Sheet Stat connecting sword title - Border */
     background-color: transparent;
 }
@@ -1667,9 +1641,7 @@ table.sheet-ship tr:hover td {
 }
 
 .sheet-ship-defense {
-    /* background:url('http://i.imgur.com/IAOS820.png') center center no-repeat; */
-    /* Starship Four Zones - Border */
-    background: url('http://i.imgur.com/VaTaF9r.png') center center no-repeat; /* Starship Four Zones - Border */
+    background: url('https://i.imgur.com/aatYel2.png') center center no-repeat; /* Starship Four Zones - Border */
     width: 302px;
     height: 236px;
     text-align: center;
@@ -1677,8 +1649,6 @@ table.sheet-ship tr:hover td {
 }
 
 .sheet-planetary-vehicle-defense {
-    /* background:url('http://i.imgur.com/jvox6Kl.png') center center no-repeat; */
-    /* Planetary Four Zones - Border */
     background: url('http://i.imgur.com/JwhFORw.png') center center no-repeat; /* Speeder Four Zones - Border */
     width: 302px;
     height: 236px;
@@ -1687,9 +1657,7 @@ table.sheet-ship tr:hover td {
 }
 
 .sheet-ship-char-thre-bg {
-    /* background-image: url('http://i.imgur.com/FxUooOF.png'); */
-    /* Threshold / Current - Border */
-    background-image: url('http://i.imgur.com/cODj4n5.png'); /* Threshold / Current - Border */
+    background-image: url('https://i.imgur.com/knyp5jb.png'); /* Threshold / Current - Border */
     background-position: center 0px;
     background-repeat: no-repeat;
     vertical-align: top;
@@ -1699,9 +1667,7 @@ table.sheet-ship tr:hover td {
 }
 
 .sheet-ship-char-thre-bg-speed {
-    /* background-image: url('http://i.imgur.com/FxUooOF.png');*/
-    /* Threshold / Current - Border */
-    background-image: url('http://i.imgur.com/cODj4n5.png'); /* Threshold / Current - Border */
+    background-image: url('https://i.imgur.com/knyp5jb.png'); /* Threshold / Current - Border */
     background-position: center 25px;
     background-repeat: no-repeat;
     vertical-align: top;
@@ -1713,8 +1679,7 @@ table.sheet-ship tr:hover td {
 
 .sheet-ship-char-bg {
     text-align: center;
-    /*background-image: url('http://i.imgur.com/EaK5056.png');   *//*Single Digit - Border*/
-    background-image: url('http://i.imgur.com/cyPJPLg.png'); /*Single Digit - Border*/
+    background-image: url('https://i.imgur.com/wVftGop.png'); /*Single Digit - Border*/
     background-position: center 37px;
     background-repeat: no-repeat;
     width: 99px;
