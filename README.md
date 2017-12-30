@@ -14,4 +14,5 @@ Change Log
 0.0.5 Added Genesys Setting Worksheet<br>
 0.0.6 [HTML update only] Fixed an issue with motivations<br>
 0.0.7 [HTML and Dice Roller update] Changed Vehicle Critical Hits to fit Genesys system (Star Wars has a different Critical Hit Table).<br>
+0.0.8 Visual upates.
 <br>
