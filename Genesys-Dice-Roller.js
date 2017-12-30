@@ -1,6 +1,6 @@
 /*
- Current Version: 0.0.7
- Last updated: 12.28.2017
+ Current Version: 0.0.8
+ Last updated: 12.30.2017
  Character Sheet and Script created by: GM Knowledge Rhino
 
  Credits:
@@ -48,7 +48,7 @@
  Initiative
  * default: false
  * Description: Set NPC/PC initiative true
- * Command: !eed npcinit or pcinit and #b #g #y #blk #p #r #w
+ * Command: !eed npcinit or pcinit and #b #g #y #blk #p #r
 
  Skill
  * default:
@@ -63,7 +63,7 @@
  Dice
  * default:
  * Description: Loop thru the dice and adds or subtracts them from the dice object
- * Command: !eed #g #y #b #blk #r #p #w #s #a
+ * Command: !eed #g #y #b #blk #r #p #s #a
 
  Upgrade
  * default:
@@ -74,11 +74,6 @@
  * default:
  * Description: downgrades proficiency and challenge dice
  * Command: !eed downgrade(proficiency|#) or downgrade(challenge|#)
-
- Destiny
- * default:
- * Description: Rolls 1w die and adds the result to the destiny pool
- * Command: !eed #w destiny doRoll
 
  Other:
  Charsheet
@@ -218,7 +213,7 @@ function SuggestionEngine() {
             }
         },
         general: {
-            Astrogation: {
+            Astrocartography: {
                 success: [
                     {
                         text: "Better target for the destination, e.g.: place vessel directly into orbit around target planet.",
@@ -555,34 +550,7 @@ function SuggestionEngine() {
                     { text: "Obtain false information about surroundings or target.", required: 1 }
                 ]
             },
-            PilotingPlanetary: {
-                success: [
-                    { text: "Gain insights into situation.", required: 1 },
-                    { text: "Deduce way to modify vehicle to make it more effective in future.", required: 1 }
-                ],
-                advantage: [
-                    {
-                        text: "Reveal vulnerability in opponent's piloting style or vehicle, giving benefit in later rounds.",
-                        required: 1
-                    }
-                ],
-                triumph: [
-                    { text: "Grant additional maneuver while continuing to pilot vehicle.", required: 1 }
-                ],
-                threat: [
-                    {
-                        text: "Spend $THREAT$$THREAT$ to give opponents $BOOST$ on checks against character and vehicle due to momentary malfunction in system.",
-                        required: 2
-                    }
-                ],
-                despair: [
-                    {
-                        text: "Deal damage to vehicle as character strains systems throughout vehicle during check.",
-                        required: 1
-                    }
-                ]
-            },
-            PilotingSpace: {
+            Piloting: {
                 success: [
                     { text: "Gain insights into situation.", required: 1 },
                     { text: "Deduce way to modify vehicle to make it more effective in future.", required: 1 }
@@ -841,8 +809,8 @@ function SuggestionEngine() {
                 AllowedSkills: [
                     "RangedHeavy",
                     "Gunnery",
-                    "PilotingSpace",
-                    "PilotingPlanetary"
+                    "Piloting",
+                    "Riding"
 
                 ],
                 '1advantage1triumph': [
@@ -1262,10 +1230,10 @@ eote.defaults = {
         diceLogRolledOnOneLine: true,
         scriptDebug: false
     },
-    '-DicePoolID': '',
+    '-GameMasterCharacterSheetID': '',
     GMSheet: {
         obj: null,
-        name: "-DicePool"
+        name: "-GameMasterCharacterSheet"
     },
     character: {
         attributes: [
@@ -1419,7 +1387,7 @@ function attemptRegisterGMObj() {
 
 eote.createGMDicePool = function () {
 
-    var charObj_DicePool = findObjs({ _type: "character", name: "-DicePool" })[0];
+    var charObj_DicePool = findObjs({ _type: "character", name: "-GameMasterCharacterSheet" })[0];
     var attrObj_DicePool = [
         {
             name: 'pcgm',
@@ -1434,14 +1402,14 @@ eote.createGMDicePool = function () {
             update: true
         }
     ];
-    //create character -DicePool
+    //create character -GameMasterCharacterSheet
     if (!charObj_DicePool) {
         charObj_DicePool = createObj("character", {
             name: GMSheet.name,
             bio: "GM Dice Pool"
         });
     }
-    eote.defaults['-DicePoolID'] = charObj_DicePool.id;
+    eote.defaults['-GameMasterCharacterSheetID'] = charObj_DicePool.id;
     GMSheet.obj = charObj_DicePool;
     eote.updateAddAttribute(charObj_DicePool, attrObj_DicePool);
 };
@@ -1528,7 +1496,7 @@ eote.updateAddAttribute = function (charactersObj, updateAddAttributesObj) { // 
 
         if (updateAddAttributesObj.length != 0) {
 
-            log('UPDATE/ADD ATTRIBUTES FOR:----------------------->' + characterName);
+            log('UPDATE/ADD ATTRIBUTES FOR:--->' + characterName);
 
             _.each(updateAddAttributesObj, function (updateAddAttrObj) { //loop attributes to update / add
 
@@ -2048,11 +2016,11 @@ eote.process.rollPlayer = function (cmd, diceObj) {
 
 eote.process.destiny = function (cmd, diceObj) {
 
-    var charObj_DicePool = findObjs({ _type: "character", name: "-DicePool" })[0];
+    var charObj_DicePool = findObjs({ _type: "character", name: "-GameMasterCharacterSheet" })[0];
     var doRoll = false;
 
     if (!charObj_DicePool) {
-        sendChat("GM", "/w " + "gm The DicePool character sheet could not be found! Re-save this script and it should be recreated. In the future do not rename the -DicePool Character Sheet.");
+        sendChat("GM", "/w " + "gm The -GameMasterCharacterSheet could not be found! Re-save this script and it should be recreated. In the future do not rename the -GameMasterCharacterSheet.");
         return doRoll;
     }
     //GM's Destiny Point Pool
@@ -2068,7 +2036,7 @@ eote.process.destiny = function (cmd, diceObj) {
     });
     if (!currentDarkSidePoints[0] || !currentLightSidePoints[0]) {
         sendChat("Dice System", "No Destiny Points Defined. The GM has been whispered with instructions to reset the Destiny Pool.");
-        sendChat("GM", "/w " + "gm The Destiny Pool system needs to be (or has been) reset. To fix this functionality, go to the -DicePool Character Sheet and add 1 dark side and 1 light side destiny point, then click the Force Player Update button. This should clear up the issue.");
+        sendChat("GM", "/w " + "gm The Destiny Pool system needs to be (or has been) reset. To fix this functionality, go to the -GameMasterCharacterSheet and add 1 GM Story Point and 1 Player Story Point point, then click the Force Player Update button. This should clear up the issue.");
         return doRoll;
     }
     var darkSide = parseInt(currentDarkSidePoints[0].get("current"));
@@ -2082,7 +2050,7 @@ eote.process.destiny = function (cmd, diceObj) {
                 darkSide = darkSide - 1;
                 lightSide = lightSide + 1;
 
-                displayPool = '/direct &{template:base} {{title=' + 'The GM flips a GM Story Point' + '}}';
+                displayPool = '/direct &{template:base} {{title=' + 'The GM uses a GM Story Point' + '}}';
                 displayPool = displayPool + '{{GM Story points remaining=' + darkSide + '}}';
                 displayPool = displayPool + '{{New Player Story Point total=' + lightSide + '}}';
 
@@ -2098,7 +2066,7 @@ eote.process.destiny = function (cmd, diceObj) {
                 lightSide = lightSide - 1;
                 darkSide = darkSide + 1;
 
-                displayPool = '/direct &{template:base} {{title=' + diceObj.vars.characterName + ' flips a Player Story Point' + '}}';
+                displayPool = '/direct &{template:base} {{title=' + diceObj.vars.characterName + ' uses a Player Story Point' + '}}';
                 displayPool = displayPool + '{{New GM Story Point total=' + darkSide + '}}';
                 displayPool = displayPool + '{{Player Story Points remaining=' + lightSide + '}}';
 
@@ -2818,7 +2786,7 @@ eote.process.createRepeatingCrit = function (type, charactersObj, critAttrs) {
 
         if (critAttrs.length != 0) {
 
-            log('UPDATE/ADD ATTRIBUTES FOR:----------------------->' + characterName);
+            log('UPDATE/ADD ATTRIBUTES FOR:--->' + characterName);
 
             _.each(critAttrs, function (critAttr) { //loop attributes to update / add
 
@@ -2885,12 +2853,12 @@ eote.process.gmdice = function (cmd) {
 
     /* gmdice
      * default: 
-     * Description: Update CMD string to include -DicePool dice
+     * Description: Update CMD string to include -GameMasterCharacterSheet dice
      * Command: (gmdice)
      * ---------------------------------------------------------------- */
 
-    //var charObj = findObjs({ _type: "character", name: "-DicePool" });
-    var charID = eote.defaults['-DicePoolID'];//charObj[0].id;
+    //var charObj = findObjs({ _type: "character", name: "-GameMasterCharacterSheet" });
+    var charID = eote.defaults['-GameMasterCharacterSheetID'];//charObj[0].id;
 
     var g = getAttrByName(charID, 'ggm');
     var y = getAttrByName(charID, 'ygm');
