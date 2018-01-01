@@ -3,13 +3,13 @@
 <input type="radio" name="attr_gmdicepool" class="sheet-gm" value="2" style="display:none">
 
 <div>
-    <h3 class="sheet-section-header"><span style="font-size:11px">Genesys Role Playing Game</span></h3>
+    <h3 class="sheet-section-header" data-i18n="genesysrpg">Genesys Role Playing Game System</></h3>
     <input style="width: 250px;height: 30px;margin: -44px -20px 0 297px;float:left;" class="sheet-toggle sheet-header-section-toggle" type="checkbox" checked="checked" />
     <div class="sheet-header-section">
         <table>
             <tr>
                 <td><label>Version</label></td>
-                <td>0.0.8</td>
+                <td>1.0.0</td>
                 <td style="width: 28%;"><label data-i18n="moreinfo">For more information on this version visit:</label></td>
                 <td><input disabled value="https://https://wiki.roll20.net/Genesys" type="text" /></td>
             </tr>
@@ -46,7 +46,7 @@
                             <td class="sheet-light"><img src="http://i.imgur.com/nlIAfJx.png" /><input name="attr_b" type="number" step="1" max="9" min="0" value="0"></td>
                             <td class="sheet-light"><img src="http://i.imgur.com/g3hoJRG.png" /><input name="attr_g" type="number" step="1" max="9" min="0" value="0"></td>
                             <td class="sheet-light"><img src="http://i.imgur.com/4bQ0dY8.png" /><input name="attr_y" type="number" step="1" max="9" min="0" value="0"></td>
-                            <td><button type='roll' name='roll_DicePool' value='!eed characterID(@{character_id}) label(Dice:Dice Pool) @{dicePool} (gmdice)'></button> </td>
+                            <td class="sheet-force"><button type='roll' name='roll_DicePool' value='!eed characterID(@{character_id}) label(Dice:Dice Pool) @{dicePool} (gmdice)'></button> </td>
                             <td class="sheet-dark"><img src="http://i.imgur.com/n9W07Lp.png" /><input name="attr_blk" type="number" step="1" max="9" min="-9" value="0"></td>
                             <td class="sheet-dark"><img src="http://i.imgur.com/oxbKghK.png" /><input name="attr_p" type="number" step="1" max="9" min="-7" value="0"></td>
                             <td class="sheet-dark"><img src="http://i.imgur.com/GInMHEN.png" /><input name="attr_r" type="number" step="1" max="9" min="-7" value="0"></td>
@@ -7108,7 +7108,7 @@
                             <td class="sheet-light"><img src="http://i.imgur.com/nlIAfJx.png" /><input name="attr_bgm" type="number" step="1" max="9" min="0" value="0"></td>
                             <td class="sheet-light"><img src="http://i.imgur.com/g3hoJRG.png" /><input name="attr_ggm" type="number" step="1" max="9" min="0" value="0"></td>
                             <td class="sheet-light"><img src="http://i.imgur.com/4bQ0dY8.png" /><input name="attr_ygm" type="number" step="1" max="9" min="0" value="0"></td>
-                            <td></td>
+                            <td class="sheet-force"><button type='roll' name='roll_DicePoolgm' value='!eed @{dicePoolgm}'></button></td>
                             <td class="sheet-dark"><img src="http://i.imgur.com/n9W07Lp.png" /><input name="attr_blkgm" type="number" step="1" max="9" min="-9" value="0"></td>
                             <td class="sheet-dark"><img src="http://i.imgur.com/oxbKghK.png" /><input name="attr_pgm" type="number" step="1" max="9" min="-7" value="0"></td>
                             <td class="sheet-dark"><img src="http://i.imgur.com/GInMHEN.png" /><input name="attr_rgm" type="number" step="1" max="9" min="-7" value="0"></td>
@@ -7126,7 +7126,6 @@
                             </td>
                             <td class="sheet-force">
                                 <input type="hidden" name="attr_dicePoolgm" value='@{ggm}g @{ygm}y @{pgm}p @{rgm}r @{bgm}b @{blkgm}blk upgrade(ability|@{upgradeAbilitygm}) downgrade(proficiency|@{downgradeProficiencygm}) upgrade(difficulty|@{upgradeDifficultygm}) downgrade(challenge|@{downgradeChallengegm})' />
-                                <button type='roll' name='roll_DicePoolgm' value='!eed @{dicePoolgm}'></button>
                                 <button type='roll' name='roll_ResetGMDicePool' value='!eed resetgmdice characterID(@{character_id})'></button>
                             </td>
                             <td colspan="3" class="sheet-downgrade sheet-dark">
@@ -8230,7 +8229,7 @@
             </div>
         </div><!-- Settings -->
     </div>
-</div><!-- Game Master sheet--><!--Edit for Genesys-->
+</div><!-- Game Master sheet-->
 <div class="sheet-clear"></div>
 
 <br />
